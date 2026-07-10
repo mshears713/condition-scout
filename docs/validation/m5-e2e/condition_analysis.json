@@ -1,0 +1,116 @@
+{
+  "listing_id": "1619602",
+  "source": "JJ Kane",
+  "analyzed_at": "2026-07-10T04:32:36Z",
+  "model": "gemini-2.5-flash-lite",
+  "schema_version": "0.2",
+  "prompt_version": "0.2",
+  "photo_observations": [
+    {
+      "photo": "photo_001.jpg",
+      "view": "exterior_sides",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "exterior sides appears intact with typical fleet wear",
+          "zone": "exterior_sides",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "medium"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_002.jpg",
+      "view": "exterior_rear",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "exterior rear appears intact with typical fleet wear",
+          "zone": "exterior_rear",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "medium"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_003.jpg",
+      "view": "roof",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "roof appears intact with typical fleet wear",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "medium"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    }
+  ],
+  "photo_coverage": {
+    "photos_analyzed": 3,
+    "zones_covered": [
+      "exterior_sides",
+      "exterior_rear",
+      "roof"
+    ],
+    "zones_missing": [
+      "exterior_front",
+      "tires_wheels",
+      "engine_bay",
+      "cab_interior",
+      "dash_instruments",
+      "cargo_area",
+      "underbody"
+    ],
+    "coverage_quality": "poor"
+  },
+  "findings": [
+    {
+      "zone": "cab_interior",
+      "polarity": "negative",
+      "description": "Typical fleet wear on the driver seat edge",
+      "severity": "minor",
+      "confidence": "medium",
+      "image_refs": [
+        "photo_001.jpg"
+      ],
+      "red_flag_hint": null
+    }
+  ],
+  "positives": [
+    {
+      "description": "Body panels straight in all exterior views",
+      "confidence": "medium",
+      "image_refs": [
+        "photo_001.jpg"
+      ]
+    }
+  ],
+  "adjustment_categories": [],
+  "dash_evidence": {
+    "warning_lights": [
+      "none visible"
+    ],
+    "odometer_visible": false,
+    "odometer_reading": null,
+    "image_refs": []
+  },
+  "mismatch_flags": [],
+  "overall": {
+    "visual_grade": "good",
+    "summary": "Work van showing typical fleet wear across the photographed zones with no damage requiring repair visible.",
+    "confidence": "medium"
+  }
+}

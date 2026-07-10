@@ -1,0 +1,18 @@
+# M5 acceptance evidence — 2026-07-10T04:32:45Z
+
+$ uv run condition-scout run --run-dir tests/e2e_run --fake-network  (exit code 1: deliberate 404404 failure)
+INFO 1619602: valid condition_analysis.json exists — resume-skip
+INFO 4043486: valid condition_analysis.json exists — resume-skip
+INFO ED5334: valid condition_analysis.json exists — resume-skip
+INFO gd-7781: valid condition_analysis.json exists — resume-skip
+WARNING 404404: resolve failed — JJ Kane item API returned HTTP 404
+INFO gsa-001: skipped — source 'GSA Auctions' has no resolver and the manifest supplied no photo_urls override
+run e2e_fake_run: 4 processed, 1 failed, 1 skipped (0 API calls) — see run_summary.json
+  FAILED 404404 at resolve: JJ Kane item API returned HTTP 404
+  SKIPPED gsa-001: source 'GSA Auctions' has no resolver and the manifest supplied no photo_urls override
+
+(second invocation above demonstrates resume: 0 API calls)
+
+$ uv run pytest -q
+.                                                                        [100%]
+73 passed, 4 deselected in 0.37s
