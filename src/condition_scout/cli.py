@@ -35,7 +35,7 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument(
         "--model",
         default=None,
-        help="Gemini model name (default: gemini-2.5-flash-lite; also via config).",
+        help="Gemini model name (default: gemini-flash-lite-latest).",
     )
     run_parser.add_argument(
         "--photos-per-call",

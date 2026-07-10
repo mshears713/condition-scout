@@ -53,8 +53,9 @@ prompts/           # photo_prompt_v0.2.md, synthesis_prompt_v0.2.md
 - pydantic v2 for all contracts; `responseJsonSchema` on Gemini calls plus
   local validation (belt and suspenders); one malformed-JSON repair retry,
   then fail the listing only.
-- Model name is config (`gemini-2.5-flash-lite` class default), never
-  hardcoded logic.
+- Model name is config (Flash-Lite class; default is the rolling
+  `gemini-flash-lite-latest` alias after the pinned 2.5 name 404'd for new
+  API projects at the 2026-07-10 live smoke), never hardcoded logic.
 - Every `condition_analysis.json` records `schema_version` and
   `prompt_version`.
 

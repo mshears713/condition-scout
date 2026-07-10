@@ -26,7 +26,11 @@ from condition_scout.schema import (
     SynthesisResult,
 )
 
-DEFAULT_MODEL = "gemini-2.5-flash-lite"
+# Rolling Flash-Lite alias: the pinned "gemini-2.5-flash-lite" 404'd for new
+# API projects at the 2026-07-10 live smoke ("no longer available to new
+# users"), exactly the model-name churn the Engineering Plan predicted.
+# Provisional delta, flagged in the Build Log: name a class, not a pin.
+DEFAULT_MODEL = "gemini-flash-lite-latest"
 
 REPAIR_INSTRUCTION = (
     "Your previous reply was not valid JSON matching the required schema. "

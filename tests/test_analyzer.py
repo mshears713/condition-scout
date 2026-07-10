@@ -116,7 +116,7 @@ def test_single_mode_one_call_per_photo_with_context(tmp_path, prompts):
     )
     assert len(fake.calls) == 3
     call = fake.calls[0]
-    assert call.model == "gemini-2.5-flash-lite"
+    assert call.model == "gemini-flash-lite-latest"
     text_parts = [p for p in call.parts if isinstance(p, str)]
     images = [p for p in call.parts if isinstance(p, ImagePart)]
     assert len(images) == 1
