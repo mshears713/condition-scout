@@ -1,0 +1,25 @@
+# M0 validation evidence — 2026-07-10T04:17:34Z
+
+Environment: Claude Code remote Linux container (finding: plan says Windows 11; code kept Windows-compatible, Windows re-verify deferred to Stage 4)
+uv 0.8.17, Python 3.11.15
+
+$ uv sync
+Resolved 32 packages in 2ms
+Audited 31 packages in 0.28ms
+
+$ uv run condition-scout --help
+usage: condition-scout [-h] {run} ...
+
+Photos in, evidence out: download listing photos for a valuation run and write
+image-cited condition artifacts per listing.
+
+positional arguments:
+  {run}
+    run       Process every listing in a run folder's run_manifest.json.
+
+options:
+  -h, --help  show this help message and exit
+
+$ uv run pytest -q
+...                                                                      [100%]
+3 passed in 0.01s
