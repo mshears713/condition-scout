@@ -16,3 +16,11 @@ run e2e_fake_run: 4 processed, 1 failed, 1 skipped (0 API calls) — see run_sum
 $ uv run pytest -q
 .                                                                        [100%]
 73 passed, 4 deselected in 0.37s
+
+# AVB-close clean-worktree re-run — 2026-07-10T04:40Z
+Fresh clone of branch claude/focused-maxwell-r45zpw into an empty folder:
+$ uv sync && uv run pytest -q
+73 passed, 4 deselected in 0.68s
+$ uv run condition-scout --help        -> usage OK
+$ uv run condition-scout run --run-dir tests/e2e_run --fake-network
+exit code 1 (by design: 4 processed, 1 failed, 1 skipped)
