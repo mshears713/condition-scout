@@ -143,7 +143,6 @@ class FakeNetworkGemini:
                     "image_refs": [refs[0]],
                 }
             ],
-            "adjustment_categories": [],
             "dash_evidence": {
                 "warning_lights": ["none visible"],
                 "odometer_visible": False,

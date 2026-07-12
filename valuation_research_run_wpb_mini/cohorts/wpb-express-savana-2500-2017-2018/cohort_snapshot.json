@@ -1,0 +1,25 @@
+{
+  "cohort_id": "wpb-express-savana-2500-2017-2018",
+  "vehicle_family": "Chevrolet Express / GMC Savana 2500 cargo van",
+  "series_or_weight_class": "2500 full-size cargo van",
+  "body_configuration": "cargo van, no side windows, fleet/commercial upfit (ladder rack, shelving)",
+  "model_year_min": 2017,
+  "model_year_max": 2018,
+  "mileage_min": 51689,
+  "mileage_max": 163753,
+  "use_context": "commercial/fleet cargo van, ex-AT&T fleet, being evaluated for a flip-to-camper-conversion project",
+  "primary_geography": "Florida",
+  "secondary_geography": "Southeast US",
+  "source_platform": "JJ Kane",
+  "listing_count": 8,
+  "listing_ids": [
+    "1604992",
+    "1615297",
+    "1608490",
+    "1601998",
+    "1614587",
+    "1614586",
+    "1615299",
+    "1608489"
+  ]
+}

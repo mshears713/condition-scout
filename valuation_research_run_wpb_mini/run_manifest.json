@@ -1,0 +1,23 @@
+{
+  "run_id": "valuation_research_run_wpb_mini_2026-07-12",
+  "created_at": "2026-07-12T00:00:00Z",
+  "source_platform_context": "JJ Kane is a true no-reserve absolute auction run on the Proxibid platform. Every lot sells to the highest bidder regardless of price -- there is no hidden reserve. Archived Proxibid catalogs publicly show 'Sold for: USD X' hammer prices for closed lots, with winning bidder aliases partially masked; live catalogs show current high bid per lot, also without login. Regional sales run roughly every two weeks per region (Northeast, Western/Gov, Southeast, Central). Buyer's fee is approximately 12% (verify per ring), plus a $125 flat admin fee on titled items and a 2.95% credit card surcharge. Same national fleet consignors (e.g. AT&T via Banc of America Leasing, utilities, government agencies) recur every cycle, so the supply of comparable fleet vans refreshes regularly.",
+  "cohorts": [
+    {
+      "cohort_id": "wpb-express-savana-2500-2017-2018",
+      "vehicle_family": "Chevrolet Express / GMC Savana 2500 cargo van",
+      "series_or_weight_class": "2500 full-size cargo van",
+      "body_configuration": "cargo van, no side windows, fleet/commercial upfit (ladder rack, shelving)",
+      "model_year_min": 2017,
+      "model_year_max": 2018,
+      "mileage_min": 51689,
+      "mileage_max": 163753,
+      "use_context": "commercial/fleet cargo van, ex-AT&T fleet, being evaluated for a flip-to-camper-conversion project",
+      "primary_geography": "Florida",
+      "secondary_geography": "Southeast US",
+      "source_platform": "JJ Kane",
+      "listing_count": 8,
+      "listing_ids": ["1604992", "1615297", "1608490", "1601998", "1614587", "1614586", "1615299", "1608489"]
+    }
+  ]
+}

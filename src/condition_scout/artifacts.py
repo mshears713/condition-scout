@@ -46,7 +46,6 @@ def build_condition_analysis(
         photo_coverage=compute_coverage(records),
         findings=synthesis.findings,
         positives=synthesis.positives,
-        adjustment_categories=synthesis.adjustment_categories,
         dash_evidence=synthesis.dash_evidence,
         mismatch_flags=synthesis.mismatch_flags,
         overall=synthesis.overall,
@@ -121,14 +120,6 @@ def render_markdown(analysis: ConditionAnalysis) -> str:
         for flag in a.mismatch_flags:
             lines.append(f"- {flag}")
         lines.append("")
-    lines.append("## Adjustment categories (zone × severity band)")
-    lines.append("")
-    if a.adjustment_categories:
-        for c in a.adjustment_categories:
-            lines.append(f"- {c.zone.value}: {c.band.value}")
-    else:
-        lines.append("- None (no zones at moderate severity or worse).")
-    lines.append("")
     lines.append("## Per-photo observations")
     lines.append("")
     for rec in a.photo_observations:

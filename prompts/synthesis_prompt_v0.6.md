@@ -1,11 +1,17 @@
 <!--
 Synced copy of Prompt 2 from the Knowledge page
-"Condition Scout — Analysis Prompt Spec" (v0.5, 2026-07-10).
+"Condition Scout — Analysis Prompt Spec" (v0.6, 2026-07-12).
 Source of truth is the Notion page; if they disagree, the page wins.
 The Knowledge page specifies Prompt 2 as judgment rules rather than a
-verbatim template; this file is the operational rendering of those rules
-(flagged in the Stage 3 Build Log for Mike's spot-check).
-prompt_version: 0.5
+verbatim template; this file is the operational rendering of those rules.
+
+v0.6 is a zero-financial-role contract revision (Mike-directed, 2026-07-12):
+the former rule 6 (emit adjustment_categories, one zone x band entry per
+zone at moderate-or-worse severity) is removed, and the future
+condition-adjustment-matrix concept is dropped entirely. Condition Scout
+has no financial role — it never maps zone x severity to a dollar band.
+No other judgment rule changed.
+prompt_version: 0.6
 
 Text-only call — no photos. The tool substitutes {YEAR}, {PLATFORM},
 {MILEAGE}, {VEHICLE_CONTEXT}, {BUYER_CALIBRATION} (the latter two from
@@ -75,21 +81,23 @@ Rules:
    covers exterior cosmetic/paint/decal-residue findings; reserve
    Interior / Cargo Roughness for the interior and cargo-area zones
    specifically — don't use it for exterior panel wear.
-6. adjustment_categories: one zone x band entry per zone that has
-   findings at moderate severity or worse.
-7. dash_evidence: report warning lights from dash observations;
+6. dash_evidence: report warning lights from dash observations;
    odometer_reading stays null unless a per-photo record flagged a
    clearly legible, blatantly contradictory reading.
-8. mismatch_flags: assemble any photo/listing contradictions the
+7. mismatch_flags: assemble any photo/listing contradictions the
    per-photo records reported (blatant odometer contradiction, a
    different vehicle in frame, stock-photo suspicion).
-9. Low coverage caps confidence: when few zones were photographed, say
+8. Low coverage caps confidence: when few zones were photographed, say
    so in the summary and lower overall confidence rather than guessing.
+9. Do not emit monetary adjustment categories or any field intended to
+   map condition severity to a dollar effect. Condition Scout has zero
+   financial role.
 
-Absolute prohibitions: dollar amounts, value opinions, buy/bid/pass
-language, mechanical diagnosis beyond visible evidence, filling gaps
-with typical-for-age assumptions. Low-confidence items are never stated
-as fact.
+Absolute prohibitions: dollar amounts, value opinions, defect
+deductions, monetary adjustment categories, price-mapping fields,
+buy/bid/pass language, mechanical diagnosis beyond visible evidence,
+filling gaps with typical-for-age assumptions. Low-confidence items are
+never stated as fact.
 
 Write the overall summary as one paragraph of valuation-relevant
 condition evidence.

@@ -82,7 +82,7 @@ def no_sleep(_: float) -> None:
 # --- prompt loading ----------------------------------------------------------
 
 def test_load_prompts_version_and_header_stripping(prompts):
-    assert prompts.version == "0.5"
+    assert prompts.version == "0.6"
     for template in (prompts.photo_template, prompts.synthesis_template):
         assert "Synced copy" not in template  # provenance header stripped
     assert "[PHOTO]" in prompts.photo_template
@@ -132,7 +132,7 @@ def test_single_mode_one_call_per_photo_with_context(tmp_path, prompts):
 
 def test_single_mode_prompt_version_survives(prompts):
     # the loaded pack version is what gets stamped into artifacts (M4 wires it)
-    assert prompts.version == "0.5"
+    assert prompts.version == "0.6"
 
 
 # --- call assembly: grouped fallback mode ------------------------------------

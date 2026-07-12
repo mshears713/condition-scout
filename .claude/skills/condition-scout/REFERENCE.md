@@ -24,8 +24,6 @@ findings: [{ zone, polarity, description, severity, confidence,
              image_refs[] (never empty — every finding cites real files),
              red_flag_hint? }]
 positives: [{ description, confidence, image_refs[] }]
-adjustment_categories: [{ zone, band: severity }]   # one per zone at
-                                                     # moderate-or-worse
 dash_evidence: { warning_lights[], odometer_visible, odometer_reading?,
                  image_refs[] }
 mismatch_flags: []   # photo/listing contradictions (e.g. wrong vehicle,
@@ -38,8 +36,9 @@ tires_wheels, engine_bay, cab_interior, dash_instruments, cargo_area,
 underbody.
 
 **Severity:** `none | minor | moderate | heavy | severe` — words, not
-numbers (a future condition-adjustment matrix maps these to dollar bands;
-this tool never does that math itself).
+numbers, describing visible condition only. Condition Scout has zero
+financial role: the former condition-adjustment-matrix concept (mapping
+zone x severity to a dollar band) is dropped entirely, not deferred.
 
 **Confidence:** `low | medium | high`.
 

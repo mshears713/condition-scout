@@ -2,7 +2,7 @@
 
 The repo's prompts/ folder carries copies synced from the "Condition Scout —
 Analysis Prompt Spec" Knowledge page (the page wins on disagreement).
-prompt_version is parsed from the filenames (photo_prompt_v0.2.md) and
+prompt_version is parsed from the filenames (photo_prompt_v0.6.md) and
 stamped into every condition_analysis.json.
 """
 

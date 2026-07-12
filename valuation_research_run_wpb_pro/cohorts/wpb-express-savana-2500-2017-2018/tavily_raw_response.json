@@ -1,0 +1,186 @@
+{
+  "content": {
+    "cohort_summary": "2017\u20132018 Chevrolet Express / GMC Savana G2500 (2500 full\u2011size cargo vans), no\u2011side\u2011windows cargo configuration, fleet/commercial upfits noted in listings (ladder racks, shelving), odometer band ~51,689\u2013163,753 miles (individual listings in the evidence set fall between ~32k\u2013109k miles). Subject batch is ex\u2011fleet (AT&T type fleet) sold out of Florida / Southeast via JJ Kane (Proxibid) platform.",
+    "source_platform_analysis": {
+      "platform": "JJ Kane Auctions (Proxibid timed/online catalogs)",
+      "same_platform_evidence_found": false,
+      "evidence_summary": "The research located multiple JJ Kane / Proxibid listings for 2017\u20132018 Express/Savana G2500 2500 cargo vans (item IDs: 1597636, 1604992, 1607624, 1607620, 1614587, 1615297, 1615435, 1616081, 1616080, 1617758, 1618430 referenced in the findings). These listings include mileage, VIN fragments, and configuration notes (ladder rack/shelving/telematics removal) and several are explicitly marked for Florida residents. However, the provided findings do not include completed/sold hammer prices from JJ Kane/Proxibid for these specific lots. JJ Kane buyer\u2011fee documentation was found (FAQ and terms pages) that reports a buyer's fee commonly 12% and a $125 administrative fee for titled items, but there are conflicting timed\u2011auction terms pages in the findings that report buyer\u2011fee ranges (12%\u201317% or flat 17% on some terms pages). Because no completed same\u2011platform sale prices for the cohort were present in the findings, same\u2011platform completed\u2011sale evidence is effectively absent in the supplied dataset.",
+      "observed_value_pattern": "No clearing/hammer\u2011price pattern could be observed on JJ Kane/Proxibid from the provided findings because completed sale prices for the subject model years/configurations were not included in the evidence set; only listings and platform fee/terms pages were found.",
+      "influence_on_auction_range": "low \u2014 platform listings and fee information influenced the auction\u2011market methodology (e.g., buyer\u2011fee assumptions) but lack of same\u2011platform completed prices prevents JJ Kane results from directly anchoring a fleet/auction clearing range.",
+      "confidence": "low"
+    },
+    "commercial_market": {
+      "value_range_low": 13192,
+      "value_range_high": 16204,
+      "rationale": "Asking\u2011price evidence from commercial retail/listing channels (CarGurus dataset in the findings) provides the primary retail/wholesale commercial market signal in the supplied evidence. Relevant asking examples in the findings include 2017 Express listings with asking prices of $13,279 and $13,192 and a 2018 Express listing asking $15,484; another 2017 asking example in the findings is $16,204. The research did not find completed retail transaction prices for this exact 2017\u20132018 cargo cohort in the provided findings, so the range above reflects observed asking prices only (low = $13,192; high = $16,204). Sample basis: multiple CarGurus asking examples for 2017\u20132018 model years in Southeastern/nearby markets appear in the findings. Limitations: no completed retail sale transactions for the specific cohort were found in the supplied evidence, and several JJ Kane listings exist but lack final sale prices.",
+      "confidence": "medium"
+    },
+    "fleet_auction_market": {
+      "value_range_low": 1050,
+      "value_range_high": 1700,
+      "rationale": "Completed wholesale/auction evidence in the findings for the model family is sparse and skewed low. The primary completed wholesale sale observed in the supplied findings is an IAA award: a 2017 GMC Savana 2500 work van 'was awarded for $1,700 USD' (source: IAA link in the findings). Copart/other auction records in the findings show very low final bids for certain Express/Savana examples (e.g., a 2017 Express final bids reported at $1,050 and other sub\u2011$1,000 final bids in the Copart/opendatacar entries), though some of those Copart results likely reflect salvage/vehicle\u2011type differences (the findings do not consistently state salvage vs non\u2011salvage for each Copart entry). No JJ Kane/Proxibid completed hammer prices for comparable 2017\u20132018 fleet cargo vans were included in the provided findings, so the fleet/auction range above is based on the limited completed other\u2011auction evidence found (IA A $1,700 award; Copart final bids as low as $1,050). Buyer\u2011fees: JJ Kane buyer fee information (12% typical + $125 titled admin fee per JJ Kane FAQ) was found in the evidence but JJ Kane hammer prices for these lots were not available to apply those fees. The findings did not provide buyer\u2011fee schedules for IAA/Copart sales; therefore buyer\u2011out\u2011the\u2011door estimates for the observed completed non\u2011JJ Kane sales cannot be calculated from the provided evidence. Sample count & recency: very small sample of completed wholesale sales for this cohort in the findings (one IAA completed award and several Copart final bids), and no same\u2011platform JJ Kane completed sales were found in the supplied dataset.",
+      "confidence": "low"
+    },
+    "mileage_patterns": [],
+    "model_year_patterns": [],
+    "important_modifiers": [
+      {
+        "modifier": "fleet upfits (ladder rack, shelving, telematics removed)",
+        "observed_effect": "present on multiple listings; effect on price not quantified in provided evidence",
+        "rationale": "Several JJ Kane and repo listings in the findings specifically mention ladder racks and shelving (e.g., JJ Kane item 1616081 notes a ladder rack; repo.com listing notes wooden rear shelving and a ladder rack). The evidence documents presence of upfits but does not contain completed\u2011sale pricing to quantify the dollar effect."
+      },
+      {
+        "modifier": "geographic concentration: Florida / Southeast",
+        "observed_effect": "evidence concentrated in Florida/Southeast; direct regional price adjustment not quantified",
+        "rationale": "Multiple JJ Kane listings in the findings reference Florida or Florida\u2011resident purchase constraints (e.g., item 1604992 marked 'for Florida residents', Proxibid West Palm Beach listing, and other JJ Kane items located in or closing from FL regions). The dataset is therefore regionally concentrated, but the findings do not provide comparative national vs regional price differentials."
+      },
+      {
+        "modifier": "source\u2011platform buyer fees (JJ Kane)",
+        "observed_effect": "increases buyer out\u2011the\u2011door cost; conflicting fee statements present in the findings",
+        "rationale": "JJ Kane FAQ and fees pages in the findings indicate a buyer's fee commonly 12% and a $125 administrative fee for titled items; separate timed\u2011auction terms pages in the findings show buyer\u2011fee ranges (12%\u201317%) or flat 17% on some terms pages. These fee statements are present in the evidence and materially affect buyer out\u2011the\u2011door costs for JJ Kane lots, but the absence of JJ Kane hammer prices in the findings prevents calculation of net buyer totals for the cohort."
+      }
+    ],
+    "representative_comparables": [
+      {
+        "vehicle": "2017 Chevrolet Express G2500 2500 Cargo Van",
+        "year": 2017,
+        "mileage": 51689,
+        "price": null,
+        "evidence_type": "same-platform listing without final sale price",
+        "source_platform": "JJ Kane Auctions (Proxibid) item 1614587",
+        "location": null,
+        "source_url": "https://jjkane.com/items/1614587",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "Listing shows 51,689 miles and 3,209 hours, runs & moves (per facts).",
+        "relevance": "high",
+        "relevance_notes": "Model year, cargo configuration, mileage near cohort low bound; direct JJ Kane listing for same cohort.",
+        "limitations": "No completed hammer/clearing price provided in the findings."
+      },
+      {
+        "vehicle": "2018 Chevrolet Express 2500 Cargo Van (ladder rack)",
+        "year": 2018,
+        "mileage": 82098,
+        "price": null,
+        "evidence_type": "same-platform listing without final sale price",
+        "source_platform": "JJ Kane Auctions (Proxibid) item 1616081",
+        "location": null,
+        "source_url": "https://jjkane.com/items/1616081",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "Listing notes ladder rack and 82,098 miles; titled item (per facts).",
+        "relevance": "high",
+        "relevance_notes": "Same platform, same upfit (ladder rack), model year within cohort.",
+        "limitations": "No completed sale price in the findings; location not specified in the facts."
+      },
+      {
+        "vehicle": "2018 GMC Savana G2500 Cargo Van",
+        "year": 2018,
+        "mileage": 60581,
+        "price": null,
+        "evidence_type": "same-platform listing without final sale price",
+        "source_platform": "JJ Kane Auctions (Proxibid) item 1607624",
+        "location": null,
+        "source_url": "https://jjkane.com/items/1607624",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "Listing shows 60,581 miles, dash warning indicators on, runs & moves (per facts).",
+        "relevance": "medium",
+        "relevance_notes": "Same platform and model family; helpful for fleet upfit and mileage context.",
+        "limitations": "No completed sale price; dash warning lights noted but no further mechanical detail in findings."
+      },
+      {
+        "vehicle": "2017 Chevrolet Express G2500 Cargo Van",
+        "year": 2017,
+        "mileage": 104572,
+        "price": null,
+        "evidence_type": "same-platform listing without final sale price",
+        "source_platform": "JJ Kane Auctions (Proxibid) item 1604992",
+        "location": "Florida (listed as for Florida residents)",
+        "source_url": "https://jjkane.com/items/1604992",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "Runs & moves for Florida residents; 104,572 miles (per facts).",
+        "relevance": "high",
+        "relevance_notes": "Direct JJ Kane listing explicitly tied to Florida; relevant geography for cohort.",
+        "limitations": "No sale/hammer price in findings."
+      },
+      {
+        "vehicle": "2017 Chevrolet Express 2500 Cargo Van",
+        "year": 2017,
+        "mileage": 66408,
+        "price": null,
+        "evidence_type": "same-platform listing without final sale price",
+        "source_platform": "JJ Kane Auctions (Proxibid) item 1597636",
+        "location": null,
+        "source_url": "https://jjkane.com/items/1597636",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "66,408 miles, runs & moves (per facts).",
+        "relevance": "high",
+        "relevance_notes": "Another same\u2011platform example within cohort mileage band.",
+        "limitations": "No completed sale price available in provided findings."
+      },
+      {
+        "vehicle": "2018 Chevrolet Express Cargo 2500 (market retail listing)",
+        "year": 2018,
+        "mileage": 142606,
+        "price": 15484,
+        "evidence_type": "retail asking-listing",
+        "source_platform": "CarGurus (Birmingham / regional listing)",
+        "location": "Birmingham area (per CarGurus feed in findings)",
+        "source_url": "https://cargurus.com/Cars/l-Used-Chevrolet-Express-Cargo-Birmingham-d618_L120",
+        "condition_context": "unknown",
+        "condition_notes": "Listed on CarGurus with asking price $15,484 and 142,606 miles (per findings).",
+        "relevance": "medium",
+        "relevance_notes": "Provides commercial retail asking\u2011price context for a 2018 Express in the region covered by the CarGurus dataset.",
+        "limitations": "Asking price (not a completed sale); geography is Alabama region rather than Florida, though CarGurus entries in findings were used as regional commercial market proxies."
+      },
+      {
+        "vehicle": "2017 GMC Savana 2500 work van",
+        "year": 2017,
+        "mileage": null,
+        "price": 1700,
+        "evidence_type": "completed other-auction wholesale sale",
+        "source_platform": "IAA (auction) - sold/awarded",
+        "location": null,
+        "source_url": "https://iaai.com/vehicledetail/45903644~US",
+        "condition_context": "unknown",
+        "condition_notes": "Finding states the 2017 Savana was awarded for $1,700 USD (per IAA entry in the findings).",
+        "relevance": "medium",
+        "relevance_notes": "One of the few completed wholesale auction results in the supplied evidence for a 2017 Savana/Express family vehicle; used to illustrate low end of wholesale clearing values found in the dataset.",
+        "limitations": "Single data point; no mileage stated in the specific IAA entry in the findings and buyer\u2011fee details for IAA not provided in the findings."
+      },
+      {
+        "vehicle": "2017 GMC Savana 2500 cargo van (repo listing)",
+        "year": 2017,
+        "mileage": 84520,
+        "price": null,
+        "evidence_type": "retail/other listing (repo.com)",
+        "source_platform": "Repo.com listing 24206",
+        "location": null,
+        "source_url": "https://repo.com/listing/24206",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "Repo.com listing shows 84,520 miles and wooden rear shelving and ladder rack (per findings).",
+        "relevance": "medium",
+        "relevance_notes": "Shows similar upfit and mileage band in third\u2011party listing outside JJ Kane; helpful for verifying presence of shelving/ladder rack on fleet vans.",
+        "limitations": "No price shown in the findings for this repo.com listing."
+      }
+    ],
+    "major_caveats": [
+      "No completed JJ Kane/Proxibid hammer prices for the specific 2017\u20132018 Express/Savana 2500 cargo vans were present in the supplied findings; many JJ Kane entries are listings without final sale results.",
+      "Completed wholesale auction evidence in the findings is very limited (one IAA completed award at $1,700 and several Copart final bids) and may include salvage or non\u2011comparable vehicle types; the findings do not consistently indicate salvage title status for those low Copart/Copart\u2011type final bids.",
+      "Commercial/retail transaction (sold) prices for the exact cohort were not found in the supplied evidence; commercial range above is therefore drawn from asking/listing prices (CarGurus excerpts) rather than completed retail sales.",
+      "JJ Kane buyer\u2011fee statements in the findings are internally inconsistent (FAQ shows a common 12% buyer's fee + $125 admin; separate timed\u2011auction terms pages in the findings show broader fee ranges or flat 17% on some terms), creating ambiguity in out\u2011the\u2011door fee calculations for JJ Kane lots.",
+      "Sample sizes for completed\u2011sale wholesale data are small and geographically/ platform\u2011diverse; this limits confidence in a precise market clearing estimate for fleet auctions for the cohort."
+    ],
+    "overall_confidence": "low",
+    "research_summary": "Within the supplied evidence the commercial (retail/asking) market for 2017\u20132018 Express/Savana 2500 cargo vans (fleet upfits) is best represented by CarGurus asking examples clustered roughly from $13,192 to $16,204 \u2014 the research found multiple asking listings in that band but no completed retail sales for the exact cohort in the provided findings, yielding medium confidence for an asking\u2011based commercial range. For fleet/auction clearing values the supplied completed wholesale evidence is sparse and low (an IAA award at $1,700 and Copart final bids as low as $1,050 in the findings); no JJ Kane completed hammer prices were present in the evidence set, so JJ Kane could not be used to anchor clearing prices. Because of the lack of same\u2011platform completed sales, small sample sizes, and some potentially salvage/atypical wholesale results in the evidence, the fleet/auction clearing range (approx. $1,050\u2013$1,700) is reported with low confidence. Important supported modifiers in the findings are the presence of fleet upfits (ladder racks/shelving) and the Florida/Southeast concentration of listings; however, the supplied evidence does not quantify their dollar impact. JJ Kane buyer\u2011fee documentation in the findings (commonly 12% buyer fee + $125 admin, with conflicting terms showing higher ranges) matters for buyer out\u2011the\u2011door math, but the evidence lacks JJ Kane hammer prices to apply those fees to this cohort."
+  },
+  "sources": [
+    {
+      "url": "https://opendatacar.com/en/auction/chevrolet/express-2500/2017-2026?sold=1",
+      "title": "Sold CHEVROLET EXPRESS 2500 2017-2026 | US Auction Results | OpenDataCar",
+      "favicon": "https://opendatacar.com/favicon.ico"
+    }
+  ],
+  "status": "completed",
+  "created_at": "2026-07-12T18:35:19.634419+00:00",
+  "response_time": 340.01,
+  "request_id": "02928646-35a0-4ead-8fec-5db7b86a2930"
+}

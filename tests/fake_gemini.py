@@ -82,7 +82,6 @@ def synthesis_result_dict():
                 "image_refs": ["photo_001.jpg"],
             }
         ],
-        "adjustment_categories": [{"zone": "cab_interior", "band": "heavy"}],
         "dash_evidence": {
             "warning_lights": ["none visible"],
             "odometer_visible": False,

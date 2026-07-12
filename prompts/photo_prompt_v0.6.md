@@ -1,9 +1,15 @@
 <!--
 Synced copy of Prompt 1 from the Knowledge page
-"Condition Scout — Analysis Prompt Spec" (v0.5, 2026-07-10).
+"Condition Scout — Analysis Prompt Spec" (v0.6, 2026-07-12).
 Source of truth is the Notion page; if they disagree, the page wins.
 Tuned via Debrief & Tune, never mid-run.
-prompt_version: 0.5
+prompt_version: 0.6
+
+v0.6 is a zero-financial-role contract revision: the future
+condition-adjustment-matrix concept was dropped. This prompt's body is
+unchanged from v0.5 — the per-photo call never asked for adjustment
+categories in the first place; only the synthesis prompt's schema
+instructions changed. Version bumped for schema/prompt consistency.
 
 The tool substitutes {YEAR}, {PLATFORM}, {MILEAGE}, {VEHICLE_CONTEXT}
 (from run_manifest.json — falls back to the historical work-van framing
