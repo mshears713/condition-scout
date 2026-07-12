@@ -11,4 +11,4 @@ Governing rule: photo AI describes condition; valuation logic interprets it.
 __version__ = "0.1.0"
 
 SCHEMA_VERSION = "0.2"
-PROMPT_VERSION = "0.2"
+PROMPT_VERSION = "0.5"

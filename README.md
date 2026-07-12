@@ -19,12 +19,15 @@ uv run condition-scout run --run-dir valuation_run_2026-07-10/
 The run folder must contain a `run_manifest.json` written by CoWork. The tool
 fills each `listings/<listing_id>/` folder with `photos/`,
 `photo_manifest.json`, `condition_analysis.json`, and `condition_analysis.md`,
-then writes a run-level `run_summary.json`. Per-listing failures are recorded
-and skipped — one bad listing never aborts the batch. Re-running resumes:
-downloaded photos and already-analyzed listings are skipped.
+then writes a run-level `run_summary.json` (state as of the most recent
+invocation) and appends one line to `run_history.jsonl` (full timeline
+across every invocation of this run folder). Per-listing failures are
+recorded and skipped — one bad listing never aborts the batch. Re-running
+resumes: downloaded photos and already-analyzed listings are skipped.
 
-`GEMINI_API_KEY` must be set in the environment for real runs (locally via
-env var; in CI it is an Actions repository secret).
+`GEMINI_API_KEY` must be available for real runs: either set in the
+environment, or in a `.env` file at the repo root (`GEMINI_API_KEY=...`,
+gitignored, loaded automatically). In CI it is an Actions repository secret.
 
 ## Development
 

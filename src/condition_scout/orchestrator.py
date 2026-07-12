@@ -25,6 +25,7 @@ from condition_scout.analyzer import (
     synthesize,
 )
 from condition_scout.artifacts import (
+    append_run_history,
     build_condition_analysis,
     utc_now_iso,
     write_condition_analysis,
@@ -43,7 +44,12 @@ from condition_scout.manifest import (
 from condition_scout.pacing import RatePacer
 from condition_scout.prompts import PromptError, load_prompts
 from condition_scout.resolvers import ResolveError, SkipListing, resolve_photo_urls
-from condition_scout.schema import ListingFailure, ListingSkip, RunSummary
+from condition_scout.schema import (
+    ListingFailure,
+    ListingSkip,
+    RunHistoryEntry,
+    RunSummary,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -63,7 +69,7 @@ def run_batch(
     prompts = load_prompts(prompts_dir)
     if prompts.version != PROMPT_VERSION:
         logger.warning(
-            "prompt files are v%s but the package pins v%s — artifacts will "
+            "prompt files are v%s but the package pins v%s - artifacts will "
             "record the file version", prompts.version, PROMPT_VERSION,
         )
     manifest = load_manifest(run_dir)
@@ -74,6 +80,8 @@ def run_batch(
     started_at = utc_now_iso()
 
     processed: list[str] = []
+    newly_processed: list[str] = []
+    resumed: list[str] = []
     failed: list[ListingFailure] = []
     skipped: list[ListingSkip] = []
 
@@ -82,8 +90,9 @@ def run_batch(
         folder = ensure_listing_skeleton(run_dir, listing)
         try:
             if has_valid_analysis(folder):
-                logger.info("%s: valid condition_analysis.json exists — resume-skip", lid)
+                logger.info("%s: valid condition_analysis.json exists - resume-skip", lid)
                 processed.append(lid)
+                resumed.append(lid)
                 continue
 
             urls = resolve_photo_urls(listing, http)
@@ -92,10 +101,13 @@ def run_batch(
             )
             records = analyze_photos(
                 listing, photo_manifest, folder, gemini, prompts, config,
+                vehicle_context=manifest.vehicle_context,
                 pacer=api_pacer, stats=stats, sleep=sleep,
             )
             synthesis = synthesize(
                 listing, records, gemini, prompts, config,
+                vehicle_context=manifest.vehicle_context,
+                buyer_calibration=manifest.buyer_calibration,
                 pacer=api_pacer, stats=stats, sleep=sleep,
             )
             analysis = build_condition_analysis(
@@ -104,27 +116,29 @@ def run_batch(
             )
             write_condition_analysis(folder, analysis)
             processed.append(lid)
+            newly_processed.append(lid)
             logger.info("%s: analyzed %d photos", lid, len(records))
         except SkipListing as exc:
             skipped.append(ListingSkip(listing_id=lid, reason=str(exc)))
-            logger.info("%s: skipped — %s", lid, exc)
+            logger.info("%s: skipped - %s", lid, exc)
         except ResolveError as exc:
             failed.append(ListingFailure(listing_id=lid, stage="resolve", reason=str(exc)))
-            logger.warning("%s: resolve failed — %s", lid, exc)
+            logger.warning("%s: resolve failed - %s", lid, exc)
         except DownloadError as exc:
             failed.append(ListingFailure(listing_id=lid, stage="download", reason=str(exc)))
-            logger.warning("%s: download failed — %s", lid, exc)
+            logger.warning("%s: download failed - %s", lid, exc)
         except AnalysisFailure as exc:
             failed.append(ListingFailure(listing_id=lid, stage=exc.stage, reason=exc.reason))
-            logger.warning("%s: %s failed — %s", lid, exc.stage, exc.reason)
+            logger.warning("%s: %s failed - %s", lid, exc.stage, exc.reason)
         except Exception as exc:  # noqa: BLE001 — batch isolation is the contract
             failed.append(ListingFailure(listing_id=lid, stage="unexpected", reason=repr(exc)))
             logger.exception("%s: unexpected failure", lid)
 
+    finished_at = utc_now_iso()
     summary = RunSummary(
         run_id=manifest.run_id,
         started_at=started_at,
-        finished_at=utc_now_iso(),
+        finished_at=finished_at,
         listings_total=len(manifest.listings),
         processed=processed,
         failed=failed,
@@ -132,6 +146,18 @@ def run_batch(
         api_calls_used=stats.calls,
     )
     write_run_summary(run_dir, summary)
+    append_run_history(
+        run_dir,
+        RunHistoryEntry(
+            invocation_started_at=started_at,
+            invocation_finished_at=finished_at,
+            newly_processed=newly_processed,
+            resumed=resumed,
+            failed=failed,
+            skipped=skipped,
+            api_calls_used=stats.calls,
+        ),
+    )
     return summary
 
 
@@ -180,7 +206,7 @@ def run_from_cli(args: argparse.Namespace) -> int:
     print(
         f"run {summary.run_id}: {len(summary.processed)} processed, "
         f"{len(summary.failed)} failed, {len(summary.skipped)} skipped "
-        f"({summary.api_calls_used} API calls) — see run_summary.json"
+        f"({summary.api_calls_used} API calls) - see run_summary.json"
     )
     for failure in summary.failed:
         print(f"  FAILED {failure.listing_id} at {failure.stage}: {failure.reason}")

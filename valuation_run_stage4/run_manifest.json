@@ -1,0 +1,72 @@
+{
+  "run_id": "valuation_run_stage4_2026-07-10",
+  "created_at": "2026-07-10T00:00:00Z",
+  "vehicle_context": "This is a used commercial fleet cargo van (Chevrolet Express G2500) being evaluated for a flip-to-camper-conversion project, not a retail or consumer vehicle purchase.",
+  "buyer_calibration": "This buyer converts cheap work vans to campers. Cosmetic ugliness (paint, adhesive/decal residue, light rust) and cargo-area wear matter little for grade — they don't add real recon labor. Body/structural condition, tires, glass, and cab condition matter more, since they add real recon labor.",
+  "listings": [
+    {
+      "listing_id": "1604992",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1604992",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 104572
+    },
+    {
+      "listing_id": "1615297",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1615297",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 96267
+    },
+    {
+      "listing_id": "1608490",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1608490",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 163753
+    },
+    {
+      "listing_id": "1601998",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1601998",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 91039
+    },
+    {
+      "listing_id": "1614587",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1614587",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 51689
+    },
+    {
+      "listing_id": "1614586",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1614586",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 159982
+    },
+    {
+      "listing_id": "1615299",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1615299",
+      "year": 2018,
+      "platform": "Chevrolet Express",
+      "mileage": 75689
+    },
+    {
+      "listing_id": "1608489",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1608489",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 145475
+    }
+  ]
+}

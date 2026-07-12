@@ -41,7 +41,7 @@ def test_download_writes_photos_and_manifest(tmp_path):
     ]
     for entry in manifest.photos:
         assert (tmp_path / "photos" / entry.filename).read_bytes() == JPEG
-    on_disk = json.loads((tmp_path / "photo_manifest.json").read_text())
+    on_disk = json.loads((tmp_path / "photo_manifest.json").read_text(encoding="utf-8"))
     assert on_disk["listing_id"] == "1619602"
     assert [p["url"] for p in on_disk["photos"]] == urls(3)
 

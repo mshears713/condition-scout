@@ -1,0 +1,15 @@
+{
+  "invocation_started_at": "2026-07-10T15:00:00Z",
+  "invocation_finished_at": "2026-07-10T15:22:00Z",
+  "newly_processed": ["1619602", "4043486"],
+  "resumed": ["gd-7781"],
+  "failed": [
+    {
+      "listing_id": "ED5334",
+      "stage": "resolve",
+      "reason": "no photos found at the Purple Wave CDN pattern"
+    }
+  ],
+  "skipped": [],
+  "api_calls_used": 68
+}

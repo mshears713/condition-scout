@@ -70,6 +70,13 @@ class RunManifest(BaseModel):
 
     run_id: str = Field(min_length=1)
     created_at: str | None = None
+    # Deal-specific framing for this run — what kind of vehicle this is and
+    # what the buyer's process cares about. Optional: falls back to the
+    # historical work-van/camper-conversion framing (see prompts.py) when a
+    # manifest doesn't supply it, so this never needs to be baked into the
+    # prompt files themselves as new vehicle types/deals come through.
+    vehicle_context: str | None = None
+    buyer_calibration: str | None = None
     listings: list[ManifestListing]
 
 

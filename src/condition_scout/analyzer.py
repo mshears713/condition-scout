@@ -183,6 +183,7 @@ def analyze_photos(
     prompts: PromptPack,
     config: AnalyzerConfig,
     *,
+    vehicle_context: str | None = None,
     pacer: RatePacer | None = None,
     stats: CallStats | None = None,
     sleep: Callable[[float], None] = time.sleep,
@@ -197,6 +198,7 @@ def analyze_photos(
         year=listing.year,
         platform=listing.platform,
         mileage=listing.mileage,
+        vehicle_context=vehicle_context,
     )
     before, _, after = prompt.partition("[PHOTO]")
 
@@ -274,6 +276,8 @@ def synthesize(
     prompts: PromptPack,
     config: AnalyzerConfig,
     *,
+    vehicle_context: str | None = None,
+    buyer_calibration: str | None = None,
     pacer: RatePacer | None = None,
     stats: CallStats | None = None,
     sleep: Callable[[float], None] = time.sleep,
@@ -287,6 +291,8 @@ def synthesize(
         year=listing.year,
         platform=listing.platform,
         mileage=listing.mileage,
+        vehicle_context=vehicle_context,
+        buyer_calibration=buyer_calibration,
     )
     observations_json = json.dumps(
         [json.loads(r.model_dump_json()) for r in records], indent=2

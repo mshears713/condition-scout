@@ -14,6 +14,7 @@ from condition_scout.manifest import ManifestListing
 from condition_scout.schema import (
     ConditionAnalysis,
     PhotoRecord,
+    RunHistoryEntry,
     RunSummary,
     SynthesisResult,
     compute_coverage,
@@ -171,4 +172,14 @@ def write_condition_analysis(
 def write_run_summary(run_dir: Path, summary: RunSummary) -> Path:
     path = run_dir / "run_summary.json"
     path.write_text(summary.model_dump_json(indent=2) + "\n", encoding="utf-8")
+    return path
+
+
+def append_run_history(run_dir: Path, entry: RunHistoryEntry) -> Path:
+    """Append one line to run_history.jsonl — run_summary.json reflects only
+    the latest invocation, so this is the only place the full multi-
+    invocation timeline survives."""
+    path = run_dir / "run_history.jsonl"
+    with path.open("a", encoding="utf-8") as f:
+        f.write(entry.model_dump_json() + "\n")
     return path

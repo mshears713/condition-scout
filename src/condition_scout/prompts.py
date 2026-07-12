@@ -64,13 +64,45 @@ def load_prompts(prompts_dir: Path | None = None) -> PromptPack:
     )
 
 
-def fill_template(template: str, *, year, platform, mileage) -> str:
-    """Substitute the listing context tokens ({YEAR}, {PLATFORM}, {MILEAGE})."""
+# Fallback framing when a run_manifest.json doesn't supply vehicle_context /
+# buyer_calibration (older manifests, fixtures). Keeps prompt behavior
+# unchanged for anyone not yet using the manifest-driven fields.
+DEFAULT_VEHICLE_CONTEXT = (
+    "This is a working commercial fleet cargo van being evaluated for a "
+    "flip/conversion project."
+)
+DEFAULT_BUYER_CALIBRATION = (
+    "This buyer converts cheap work vans to campers. Cosmetic ugliness "
+    "(paint, adhesive/decal residue, light rust) and cargo-area wear matter "
+    "little for grade — they don't add real recon labor. Body/structural "
+    "condition, tires, glass, and cab condition matter more, since they add "
+    "real recon labor."
+)
+
+
+def fill_template(
+    template: str,
+    *,
+    year,
+    platform,
+    mileage,
+    vehicle_context: str | None = None,
+    buyer_calibration: str | None = None,
+) -> str:
+    """Substitute the listing/run context tokens. `vehicle_context` and
+    `buyer_calibration` come from run_manifest.json (deal- and
+    vehicle-type-specific framing) so this never has to be re-baked into the
+    prompt files for a different vehicle type or buying thesis; absent from
+    the manifest, they fall back to the historical work-van framing."""
     return (
         template.replace("{YEAR}", str(year) if year is not None else "unknown-year")
         .replace("{PLATFORM}", platform or "unknown-platform")
         .replace(
             "{MILEAGE}",
             f"{mileage:,}" if mileage is not None else "unknown",
+        )
+        .replace("{VEHICLE_CONTEXT}", vehicle_context or DEFAULT_VEHICLE_CONTEXT)
+        .replace(
+            "{BUYER_CALIBRATION}", buyer_calibration or DEFAULT_BUYER_CALIBRATION
         )
     )

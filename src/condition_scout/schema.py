@@ -229,6 +229,22 @@ class RunSummary(_Contract):
     api_calls_used: int
 
 
+class RunHistoryEntry(_Contract):
+    """One line of run_history.jsonl — one entry per CLI invocation of a run
+    folder. run_summary.json reflects only the latest invocation's state;
+    this is the append-only log that preserves the full timeline across
+    resumed/multi-invocation batches (same-day tuning, or resume-next-day
+    after quota exhaustion)."""
+
+    invocation_started_at: str
+    invocation_finished_at: str
+    newly_processed: list[str]
+    resumed: list[str]
+    failed: list[ListingFailure]
+    skipped: list[ListingSkip]
+    api_calls_used: int
+
+
 def zone_of_view(view: str) -> Zone | None:
     """Extract the zone token from a `view` string ("cab_interior — driver
     seat area" -> cab_interior). Returns None for unrecognizable views."""

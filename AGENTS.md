@@ -28,6 +28,11 @@ condition-scout run --run-dir valuation_run_YYYY-MM-DD/
   GovDeals via manifest-supplied pre-resolved photo URLs (override path).
 - No GUI, no daemon, no database, **no Notion access**, no browser automation.
 - Per-listing failures are recorded and skipped, never fatal. Resumable.
+- `run_summary.json` reflects only the most recent invocation of a run
+  folder. `run_history.jsonl` (one appended line per invocation) has the
+  full timeline across multi-invocation batches (iterative tuning,
+  resume-next-day after quota exhaustion) — check it, not just
+  `run_summary.json`, when reconstructing when a batch actually completed.
 - Designed to the Gemini free tier: default `photos_per_call=1`, RPM pacing,
   429 exponential backoff, `photos_per_call>1` grouping as a quota fallback.
 - Out of scope for v0: GovDeals scraping, GSA, dollar math, valuation/report

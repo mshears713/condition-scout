@@ -8,6 +8,7 @@ dependencies = [
     "requests>=2.32",
     "pydantic>=2.7",
     "google-genai>=1.0",
+    "python-dotenv>=1.2.2",
 ]
 
 [project.scripts]

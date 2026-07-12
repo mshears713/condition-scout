@@ -95,21 +95,21 @@ def test_write_condition_analysis_round_trips(tmp_path):
     )
     write_condition_analysis(tmp_path, analysis)
     reloaded = ConditionAnalysis.model_validate(
-        json.loads((tmp_path / "condition_analysis.json").read_text())
+        json.loads((tmp_path / "condition_analysis.json").read_text(encoding="utf-8"))
     )
     assert reloaded == analysis
-    md = (tmp_path / "condition_analysis.md").read_text()
+    md = (tmp_path / "condition_analysis.md").read_text(encoding="utf-8")
     assert md.startswith("# Condition Analysis — JJ Kane listing 1619602")
     assert "prompt v0.2" in md
 
 
 def test_write_run_summary(tmp_path):
     summary = RunSummary.model_validate(
-        json.loads((GOLDEN / "run_summary.json").read_text())
+        json.loads((GOLDEN / "run_summary.json").read_text(encoding="utf-8"))
     )
     path = write_run_summary(tmp_path, summary)
-    assert json.loads(path.read_text()) == json.loads(
-        (GOLDEN / "run_summary.json").read_text()
+    assert json.loads(path.read_text(encoding="utf-8")) == json.loads(
+        (GOLDEN / "run_summary.json").read_text(encoding="utf-8")
     )
 
 
@@ -117,7 +117,7 @@ def test_write_run_summary(tmp_path):
 
 def test_artifacts_contain_no_dollar_or_decision_language():
     md = render_markdown(golden_analysis())
-    raw_json = (GOLDEN / "condition_analysis.json").read_text()
+    raw_json = (GOLDEN / "condition_analysis.json").read_text(encoding="utf-8")
     for text in (md, raw_json):
         assert "$" not in text
         for word in ("buy", "bid", "pass on", "worth", "value estimate"):

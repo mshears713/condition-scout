@@ -1,0 +1,1067 @@
+{
+  "listing_id": "1608489",
+  "source": "JJ Kane",
+  "analyzed_at": "2026-07-10T18:13:58Z",
+  "model": "gemini-flash-lite-latest",
+  "schema_version": "0.2",
+  "prompt_version": "0.5",
+  "photo_observations": [
+    {
+      "photo": "photo_001.jpg",
+      "view": "exterior_front",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Front bumper and grille assembly are intact with normal wear consistent with commercial use",
+          "zone": "exterior_front",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Roof-mounted ladder rack system is installed and appears to be in good condition; standard bolt-on configuration suggests straightforward removal",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Minor paint scuffs and surface wear on the front bumper and lower body panels",
+          "zone": "exterior_front",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_002.jpg",
+      "view": "exterior_sides",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Roof rack system installed, appears to be a standard commercial ladder rack, appears to be bolted to the roof gutters, condition is consistent with age and use",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Front bumper has significant scuffing and paint loss on the passenger side corner",
+          "zone": "exterior_front",
+          "polarity": "negative",
+          "severity": "moderate",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Faded decal residue visible on the passenger side front door panel",
+          "zone": "exterior_sides",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Exterior body panels, mirrors, and glass appear intact without major dents or cracks",
+          "zone": "exterior_sides",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_003.jpg",
+      "view": "exterior_rear",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Roof-mounted ladder rack system is installed, appears to be standard commercial steel construction, bolted to roof gutters, appears removable with standard hand tools",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Rear body panels show minor surface scuffs and scratches consistent with commercial use",
+          "zone": "exterior_rear",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Rear bumper and taillights are intact and properly aligned",
+          "zone": "exterior_rear",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_004.jpg",
+      "view": "exterior_rear",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Roof-mounted ladder rack system is present and appears intact, standard commercial equipment",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Rear body panels show significant paint fading and clear coat failure, particularly on the upper rear door trim",
+          "zone": "exterior_rear",
+          "polarity": "negative",
+          "severity": "moderate",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Reflective safety tape is applied to the rear doors and bumper, showing signs of age and wear",
+          "zone": "exterior_rear",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Rear bumper is intact with standard surface wear",
+          "zone": "exterior_rear",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_005.jpg",
+      "view": "cab_interior",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Vehicle manufacturer information label is intact and legible",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_006.jpg",
+      "view": "cab_interior",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Tire and loading information placard is present and legible",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Placard surface shows minor dirt and surface wear",
+          "zone": "cab_interior",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_007.jpg",
+      "view": "exterior_front",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Vehicle identification number (VIN) plate is clearly visible and intact",
+          "zone": "exterior_front",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_008.jpg",
+      "view": "dash_instruments",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Seatbelt warning light is illuminated",
+          "zone": "dash_instruments",
+          "polarity": "negative",
+          "severity": "moderate",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Instrument cluster gauges are functional and clear",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": [
+        "seatbelt"
+      ],
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_009.jpg",
+      "view": "dash_instruments",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Odometer reading matches the listed mileage of 145,475 miles",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "No warning lights are illuminated on the instrument cluster",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_010.jpg",
+      "view": "dash_instruments",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Instrument cluster is functional and displaying engine hours",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_011.jpg",
+      "view": "dash_instruments",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Dashboard center console and instrument panel are intact and clean",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Aftermarket labels 'IT IS WELL' and 'F3 ALT F4 REG' applied to top of dash",
+          "zone": "dash_instruments",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Auxiliary switches for strobe and inverter installed in center console",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_012.jpg",
+      "view": "cab_interior",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Vehicle height information sticker is present and legible on the interior windshield area",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_013.jpg",
+      "view": "cab_interior",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Driver seat upholstery shows moderate wear on the outer bolster and cushion surface",
+          "zone": "cab_interior",
+          "polarity": "negative",
+          "severity": "moderate",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Metal storage box installed on the passenger side floor, appears to be bolted to the floor, moderate effort for removal",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Rubber floor mat is present and intact",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Interior door panel and dashboard appear intact",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_014.jpg",
+      "view": "cab_interior",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Driver seat upholstery appears intact with normal wear for age and mileage",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Metal storage console box installed between seats, appears to be bolted to the floor, standard commercial equipment",
+          "zone": "cab_interior",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Rubber floor mat shows signs of heavy use and dirt accumulation",
+          "zone": "cab_interior",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_015.jpg",
+      "view": "exterior_front",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Front bumper has scuffing and paint loss on the driver side corner",
+          "zone": "exterior_front",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Roof rack system is installed and appears intact",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Front grille, headlights, and hood appear intact and in good condition",
+          "zone": "exterior_front",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_016.jpg",
+      "view": "exterior_sides",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Exterior body panels show typical wear including light surface scratches and scuffs consistent with commercial use",
+          "zone": "exterior_sides",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Roof-mounted ladder rack is installed; appears to be a standard metal commercial rack, condition is consistent with age and use, appears to be bolted to the roof structure",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Tires and wheels appear to be in standard condition with no obvious damage or excessive wear visible from this angle",
+          "zone": "tires_wheels",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "medium"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_017.jpg",
+      "view": "exterior_rear",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Rear doors and bumper are intact with standard commercial wear",
+          "zone": "exterior_rear",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Reflective safety tape on rear doors shows peeling and surface wear",
+          "zone": "exterior_rear",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Faint ghosting/residue from previous decals on rear doors",
+          "zone": "exterior_rear",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Interior wire mesh window guards are installed and appear to be in good condition",
+          "zone": "exterior_rear",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_018.jpg",
+      "view": "cargo_area",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Adrian Steel metal shelving unit installed, appears to be in good condition and bolted to the floor and side walls, standard removal expected",
+          "zone": "cargo_area",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Cargo floor shows moderate wear with scuffs and surface scratches consistent with commercial use",
+          "zone": "cargo_area",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Interior side walls show minor scuffs and surface wear from cargo loading",
+          "zone": "cargo_area",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_019.jpg",
+      "view": "exterior_sides",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Exterior body panels show minor scuffs and paint wear consistent with commercial use, including some adhesive residue from removed decals",
+          "zone": "exterior_sides",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Roof-mounted ladder rack is present; appears to be a standard commercial bolt-on unit, removable with standard hand tools",
+          "zone": "roof",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Tires and wheels appear to be in standard condition with no visible damage or excessive wear",
+          "zone": "tires_wheels",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "medium"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_020.jpg",
+      "view": "cargo_area",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Cargo area is equipped with extensive Adrian Steel metal shelving and a full-height partition with wire mesh windows; equipment appears to be in good condition and bolted to the floor and walls, suggesting standard removal effort required.",
+          "zone": "cargo_area",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Floor shows moderate surface wear and scuffing consistent with commercial use.",
+          "zone": "cargo_area",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_021.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Engine bay appears complete and intact with standard components present",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "General accumulation of road dust and grime throughout the engine bay consistent with age and mileage",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Surface rust visible on the cowl panel area near the windshield base",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_022.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Engine bay appears complete and intact with standard components present",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "General accumulation of road dust and grime throughout the engine bay consistent with vehicle age and use",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_023.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Engine bay components appear intact and in expected condition for age and mileage",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "General accumulation of road dust and grime throughout the engine bay",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Minor surface rust visible on metal brackets near the front grille area",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_024.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Engine bay components appear intact and in place",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Accumulated dust and debris present throughout the engine bay",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Surface rust on metal brackets and fasteners near the front radiator support",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Debris, specifically dried leaves, present in the cowl area near the windshield",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_025.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Engine bay appears generally clean and intact with standard components present",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Coolant reservoir shows typical discoloration from age and heat exposure",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Accumulation of organic debris (leaves) in the cowl area near the windshield wipers",
+          "zone": "engine_bay",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_026.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Engine coolant reservoir is present and intact, showing typical surface dust and minor discoloration consistent with age and use",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Engine bay components appear complete with no obvious signs of missing parts, fluid leaks, or damaged wiring visible in this section",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_027.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Vehicle emission control information label is intact and legible",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_028.jpg",
+      "view": "engine_bay",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "A/C refrigerant and lubricant specification label is intact and legible",
+          "zone": "engine_bay",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_029.jpg",
+      "view": "tires_wheels",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Tire tread appears to have adequate depth remaining",
+          "zone": "tires_wheels",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Steel wheel rim shows surface rust around the lug nut area",
+          "zone": "tires_wheels",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_030.jpg",
+      "view": "tires_wheels",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Tire tread appears to have adequate depth remaining",
+          "zone": "tires_wheels",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Steel wheel shows surface rust around the lug nuts and center hub area",
+          "zone": "tires_wheels",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_031.jpg",
+      "view": "tires_wheels",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Tire tread appears to have adequate depth remaining",
+          "zone": "tires_wheels",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Steel wheel shows surface rust around the lug nuts and center hub area",
+          "zone": "tires_wheels",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_032.jpg",
+      "view": "tires_wheels",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Tire tread appears to have significant remaining depth, sidewall is intact with no visible cracking or damage",
+          "zone": "tires_wheels",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Steel wheel and center cap show minor surface oxidation and road grime",
+          "zone": "tires_wheels",
+          "polarity": "negative",
+          "severity": "minor",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    }
+  ],
+  "photo_coverage": {
+    "photos_analyzed": 32,
+    "zones_covered": [
+      "exterior_front",
+      "exterior_sides",
+      "exterior_rear",
+      "tires_wheels",
+      "engine_bay",
+      "cab_interior",
+      "dash_instruments",
+      "cargo_area"
+    ],
+    "zones_missing": [
+      "roof",
+      "underbody"
+    ],
+    "coverage_quality": "good"
+  },
+  "findings": [
+    {
+      "zone": "exterior_front",
+      "polarity": "negative",
+      "description": "Front bumper shows moderate scuffing and paint loss on the passenger side corner, with additional minor scuffs and paint wear on the driver side corner and lower body panels.",
+      "severity": "moderate",
+      "confidence": "high",
+      "image_refs": [
+        "photo_001.jpg",
+        "photo_002.jpg",
+        "photo_015.jpg"
+      ],
+      "red_flag_hint": "Body Damage"
+    },
+    {
+      "zone": "exterior_sides",
+      "polarity": "negative",
+      "description": "Faded decal residue and minor surface scratches are present on the side body panels.",
+      "severity": "minor",
+      "confidence": "high",
+      "image_refs": [
+        "photo_002.jpg",
+        "photo_016.jpg",
+        "photo_019.jpg"
+      ],
+      "red_flag_hint": "Body Damage"
+    },
+    {
+      "zone": "exterior_rear",
+      "polarity": "negative",
+      "description": "Significant paint fading and clear coat failure on upper rear door trim, with minor surface scuffs, scratches, peeling reflective safety tape, and decal residue.",
+      "severity": "moderate",
+      "confidence": "high",
+      "image_refs": [
+        "photo_003.jpg",
+        "photo_004.jpg",
+        "photo_017.jpg"
+      ],
+      "red_flag_hint": "Body Damage"
+    },
+    {
+      "zone": "cab_interior",
+      "polarity": "negative",
+      "description": "Driver seat upholstery shows moderate wear on the outer bolster and cushion; rubber floor mat shows heavy use and dirt accumulation; minor wear on interior placards and aftermarket labels on the dashboard.",
+      "severity": "moderate",
+      "confidence": "high",
+      "image_refs": [
+        "photo_006.jpg",
+        "photo_011.jpg",
+        "photo_013.jpg",
+        "photo_014.jpg"
+      ],
+      "red_flag_hint": "Interior / Cargo Roughness"
+    },
+    {
+      "zone": "dash_instruments",
+      "polarity": "negative",
+      "description": "Seatbelt warning light was observed illuminated in one photo.",
+      "severity": "moderate",
+      "confidence": "high",
+      "image_refs": [
+        "photo_008.jpg"
+      ],
+      "red_flag_hint": "CEL / Dash Warning"
+    },
+    {
+      "zone": "cargo_area",
+      "polarity": "negative",
+      "description": "Cargo floor and side walls show moderate scuffs and surface scratches consistent with commercial use.",
+      "severity": "minor",
+      "confidence": "high",
+      "image_refs": [
+        "photo_018.jpg",
+        "photo_020.jpg"
+      ],
+      "red_flag_hint": "Interior / Cargo Roughness"
+    },
+    {
+      "zone": "engine_bay",
+      "polarity": "negative",
+      "description": "General accumulation of road dust, grime, and organic debris in the cowl area; minor surface rust on metal brackets and fasteners near the radiator support and cowl panel.",
+      "severity": "minor",
+      "confidence": "high",
+      "image_refs": [
+        "photo_021.jpg",
+        "photo_023.jpg",
+        "photo_024.jpg",
+        "photo_025.jpg"
+      ],
+      "red_flag_hint": "Rust / Corrosion"
+    },
+    {
+      "zone": "tires_wheels",
+      "polarity": "negative",
+      "description": "Steel wheels show surface rust around lug nuts and center hub areas.",
+      "severity": "minor",
+      "confidence": "high",
+      "image_refs": [
+        "photo_029.jpg",
+        "photo_030.jpg",
+        "photo_031.jpg",
+        "photo_032.jpg"
+      ],
+      "red_flag_hint": "Door / Glass / Tire Issue"
+    }
+  ],
+  "positives": [
+    {
+      "description": "Roof-mounted commercial ladder rack system is present and appears intact.",
+      "confidence": "high",
+      "image_refs": [
+        "photo_001.jpg",
+        "photo_002.jpg",
+        "photo_003.jpg",
+        "photo_004.jpg",
+        "photo_015.jpg",
+        "photo_016.jpg",
+        "photo_019.jpg"
+      ]
+    },
+    {
+      "description": "Cargo area is equipped with Adrian Steel shelving and a full-height partition with wire mesh windows.",
+      "confidence": "high",
+      "image_refs": [
+        "photo_018.jpg",
+        "photo_020.jpg"
+      ]
+    }
+  ],
+  "adjustment_categories": [
+    {
+      "zone": "exterior_front",
+      "band": "moderate"
+    },
+    {
+      "zone": "exterior_rear",
+      "band": "moderate"
+    },
+    {
+      "zone": "cab_interior",
+      "band": "moderate"
+    },
+    {
+      "zone": "dash_instruments",
+      "band": "moderate"
+    }
+  ],
+  "dash_evidence": {
+    "warning_lights": [
+      "seatbelt"
+    ],
+    "odometer_visible": true,
+    "odometer_reading": null,
+    "image_refs": [
+      "photo_008.jpg",
+      "photo_009.jpg"
+    ]
+  },
+  "mismatch_flags": [],
+  "overall": {
+    "visual_grade": "good",
+    "summary": "This 2017 Chevrolet Express shows typical signs of commercial use, including moderate exterior paint scuffs and clear coat failure on the rear doors, as well as moderate wear to the driver seat upholstery. The cargo area is outfitted with Adrian Steel shelving and a partition, and the roof features a commercial ladder rack. While a seatbelt warning light was observed in one instrument cluster photo, no other warning lights were present in subsequent images. The vehicle exhibits minor surface rust on engine bay brackets and steel wheels, which is consistent with its age and commercial history. As no heavy or severe damage was identified in structural or primary mechanical zones, the vehicle is graded as good.",
+    "confidence": "high"
+  }
+}

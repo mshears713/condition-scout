@@ -14,6 +14,10 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 class GeminiError(Exception):
     """Non-retryable API failure."""
@@ -44,7 +48,8 @@ def mime_type_for(filename: str) -> str:
 
 class RealGeminiClient:
     """google-genai SDK wrapper. Requires GEMINI_API_KEY in the environment
-    (never logged, never persisted — see AGENTS.md secret hygiene)."""
+    or in a local .env file at the repo root (never logged, never
+    committed — see .gitignore)."""
 
     def __init__(self, api_key: str | None = None):
         from google import genai

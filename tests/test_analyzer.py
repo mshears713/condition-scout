@@ -82,7 +82,7 @@ def no_sleep(_: float) -> None:
 # --- prompt loading ----------------------------------------------------------
 
 def test_load_prompts_version_and_header_stripping(prompts):
-    assert prompts.version == "0.2"
+    assert prompts.version == "0.5"
     for template in (prompts.photo_template, prompts.synthesis_template):
         assert "Synced copy" not in template  # provenance header stripped
     assert "[PHOTO]" in prompts.photo_template
@@ -123,7 +123,7 @@ def test_single_mode_one_call_per_photo_with_context(tmp_path, prompts):
     assert images[0].data == SAMPLE_JPG.read_bytes()
     assert images[0].mime_type == "image/jpeg"
     joined = "\n".join(text_parts)
-    assert "2016 Ford Transit 250 cargo van, listed at 128,000 miles" in joined
+    assert "2016 Ford Transit 250, listed at 128,000 miles" in joined
     assert "photo_001.jpg" in joined
     assert "photo" not in call.response_schema.get("required", [])
     # filenames stamped from the manifest, not trusted from the model
@@ -132,7 +132,7 @@ def test_single_mode_one_call_per_photo_with_context(tmp_path, prompts):
 
 def test_single_mode_prompt_version_survives(prompts):
     # the loaded pack version is what gets stamped into artifacts (M4 wires it)
-    assert prompts.version == "0.2"
+    assert prompts.version == "0.5"
 
 
 # --- call assembly: grouped fallback mode ------------------------------------
@@ -319,7 +319,7 @@ def test_has_valid_analysis(tmp_path):
     golden = Path(__file__).parent / "golden" / "condition_analysis.json"
     assert not has_valid_analysis(tmp_path)  # missing
     target = tmp_path / "condition_analysis.json"
-    target.write_text('{"broken": true}')
+    target.write_text('{"broken": true}', encoding="utf-8")
     assert not has_valid_analysis(tmp_path)  # invalid
-    target.write_text(golden.read_text())
+    target.write_text(golden.read_text(encoding="utf-8"), encoding="utf-8")
     assert has_valid_analysis(tmp_path)  # valid

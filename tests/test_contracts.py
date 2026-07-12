@@ -21,6 +21,7 @@ from condition_scout.schema import (
     ConditionAnalysis,
     Finding,
     PhotoRecord,
+    RunHistoryEntry,
     RunSummary,
     Zone,
     compute_coverage,
@@ -45,6 +46,12 @@ def test_condition_analysis_golden_round_trip():
 def test_run_summary_golden_round_trip():
     data = load_golden("run_summary.json")
     model = RunSummary.model_validate(data)
+    assert json.loads(model.model_dump_json()) == data
+
+
+def test_run_history_entry_golden_round_trip():
+    data = load_golden("run_history_entry.json")
+    model = RunHistoryEntry.model_validate(data)
     assert json.loads(model.model_dump_json()) == data
 
 
@@ -140,12 +147,12 @@ def test_ensure_listing_skeleton(tmp_path):
     folder = ensure_listing_skeleton(tmp_path, listing)
     assert folder == tmp_path / "listings" / "1619602"
     assert (folder / "photos").is_dir()
-    snapshot = json.loads((folder / "listing_snapshot.json").read_text())
+    snapshot = json.loads((folder / "listing_snapshot.json").read_text(encoding="utf-8"))
     assert snapshot["listing_id"] == "1619602"
     # idempotent: second call must not clobber
-    (folder / "listing_snapshot.json").write_text('{"listing_id": "edited"}')
+    (folder / "listing_snapshot.json").write_text('{"listing_id": "edited"}', encoding="utf-8")
     ensure_listing_skeleton(tmp_path, listing)
-    assert json.loads((folder / "listing_snapshot.json").read_text())["listing_id"] == "edited"
+    assert json.loads((folder / "listing_snapshot.json").read_text(encoding="utf-8"))["listing_id"] == "edited"
 
 
 # --- evidence citation rule --------------------------------------------------
