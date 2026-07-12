@@ -73,11 +73,11 @@ def test_build_condition_analysis_stamps_and_computes():
         sample_records(),
         sample_synthesis(),
         model="gemini-2.5-flash-lite",
-        prompt_version="0.2",
+        prompt_version="0.6",
         analyzed_at="2026-07-10T15:00:00Z",
     )
-    assert analysis.schema_version == "0.2"
-    assert analysis.prompt_version == "0.2"
+    assert analysis.schema_version == "0.6"
+    assert analysis.prompt_version == "0.6"
     assert analysis.listing_id == "1619602"
     # coverage computed from the records' view fields, not model-asserted
     assert analysis.photo_coverage.photos_analyzed == 3
@@ -90,7 +90,7 @@ def test_build_condition_analysis_stamps_and_computes():
 def test_write_condition_analysis_round_trips(tmp_path):
     analysis = build_condition_analysis(
         listing(), sample_records(), sample_synthesis(),
-        model="gemini-2.5-flash-lite", prompt_version="0.2",
+        model="gemini-2.5-flash-lite", prompt_version="0.6",
         analyzed_at="2026-07-10T15:00:00Z",
     )
     write_condition_analysis(tmp_path, analysis)
@@ -100,7 +100,7 @@ def test_write_condition_analysis_round_trips(tmp_path):
     assert reloaded == analysis
     md = (tmp_path / "condition_analysis.md").read_text(encoding="utf-8")
     assert md.startswith("# Condition Analysis — JJ Kane listing 1619602")
-    assert "prompt v0.2" in md
+    assert "prompt v0.6" in md
 
 
 def test_write_run_summary(tmp_path):

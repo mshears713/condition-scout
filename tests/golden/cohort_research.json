@@ -1,0 +1,70 @@
+{
+  "cohort_id": "wpb-express-savana-2500-2017-2018",
+  "source": "Tavily Research",
+  "analyzed_at": "2026-07-12T18:00:00Z",
+  "model": "mini",
+  "schema_version": "0.2",
+  "prompt_version": "0.2",
+  "request_id": "req-golden-001",
+  "content": {
+    "cohort_summary": "2017-2018 Chevrolet Express/GMC Savana 2500 cargo vans, FL/Southeast, 51k-164k miles.",
+    "source_platform_analysis": {
+      "platform": "JJ Kane",
+      "same_platform_evidence_found": true,
+      "evidence_summary": "Archived Proxibid catalogs show hammer prices for comparable fleet vans.",
+      "observed_value_pattern": "Running fleet vans with cosmetic wear cleared $700-2,600 in recent regional sales.",
+      "influence_on_auction_range": "Moderate — small sample size but directly on-platform.",
+      "confidence": "medium"
+    },
+    "commercial_market": {
+      "value_range_low": 7000.0,
+      "value_range_high": 11000.0,
+      "rationale": "Asking prices on CommercialTruckTrader for comparable Express/Savana 2500 vans in this mileage band.",
+      "confidence": "medium"
+    },
+    "fleet_auction_market": {
+      "value_range_low": 2500.0,
+      "value_range_high": 5500.0,
+      "rationale": "JJ Kane archived catalog hammer prices for comparable fleet vehicles.",
+      "confidence": "medium"
+    },
+    "mileage_patterns": [
+      {
+        "mileage_range": "50,000-100,000",
+        "observed_pattern": "Higher end of the auction range.",
+        "rationale": "Lower-mileage comparables cleared closer to the top of the range."
+      }
+    ],
+    "model_year_patterns": [],
+    "important_modifiers": [],
+    "representative_comparables": [
+      {
+        "vehicle": "2017 Chevrolet Express 2500 Cargo Van",
+        "year": 2017,
+        "mileage": 98000,
+        "price": 3200.0,
+        "evidence_type": "auction_clearing",
+        "source_platform": "JJ Kane",
+        "location": "Louisiana",
+        "source_url": "https://proxibid.com/example-lot",
+        "condition_context": "typical_used_fleet",
+        "condition_notes": "Runs and moves, interior wear consistent with fleet use.",
+        "relevance": "high",
+        "relevance_notes": "Same source platform, comparable year and mileage.",
+        "limitations": "Different region (LA vs FL)."
+      }
+    ],
+    "major_caveats": [
+      "Small same-platform sample size."
+    ],
+    "overall_confidence": "medium",
+    "research_summary": "Fleet-auction clearing values run well below commercial asking prices for this cohort."
+  },
+  "sources": [
+    {
+      "title": "JJ Kane Archived Catalog 297380",
+      "url": "https://proxibid.com/example-lot",
+      "favicon": null
+    }
+  ]
+}

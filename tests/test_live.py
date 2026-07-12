@@ -67,8 +67,8 @@ def test_live_purplewave_cdn_pattern(http):
     reason="GEMINI_API_KEY absent — live Gemini smoke reverts to Deferred",
 )
 def test_live_gemini_structured_output_single_photo(tmp_path):
-    """One real Gemini call on a fixture photo, validated against schema
-    v0.2 — proves responseJsonSchema adherence end to end."""
+    """One real Gemini call on a fixture photo, validated against the
+    PhotoRecord contract — proves responseJsonSchema adherence end to end."""
     import shutil
     from pathlib import Path
 

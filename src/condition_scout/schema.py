@@ -1,10 +1,11 @@
-"""Contracts: condition_analysis v0.2, photo_manifest, run_summary.
+"""Contracts: condition_analysis v0.6, photo_manifest, run_summary.
 
 These schemas are the CoWork-facing promise of the tool. Zone/severity
-structure follows the Tool page's v0.2 placeholder; grading anchors live in
-the Analysis Prompt Spec, not here. Severity bands and grades are words, not
-numbers, so the future condition-adjustment matrix can map zone x band to
-dollar bands outside this tool.
+structure follows the Tool page's approved v0.6 zero-financial-role contract;
+grading anchors live in the Analysis Prompt Spec, not here. Severity bands
+and grades are words, not numbers, and describe visible condition only —
+Condition Scout has no financial role and never maps zone x severity to a
+dollar band (the former condition-adjustment-matrix concept is dropped).
 """
 
 from __future__ import annotations
@@ -13,7 +14,7 @@ from enum import Enum
 
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = "0.2"
+from condition_scout import SCHEMA_VERSION
 
 # The 10 photo zones. `view` strings must start with one of these; anything
 # after the zone token (e.g. "cab_interior — driver seat area") is free text.
@@ -140,11 +141,6 @@ class Positive(_Contract):
     image_refs: list[str] = Field(min_length=1)
 
 
-class AdjustmentCategory(_Contract):
-    zone: Zone
-    band: Severity
-
-
 class DashEvidence(_Contract):
     warning_lights: list[str]
     odometer_visible: bool
@@ -163,7 +159,6 @@ class SynthesisResult(_Contract):
 
     findings: list[Finding]
     positives: list[Positive]
-    adjustment_categories: list[AdjustmentCategory]
     dash_evidence: DashEvidence
     mismatch_flags: list[str]
     overall: Overall
@@ -183,7 +178,6 @@ class ConditionAnalysis(_Contract):
     photo_coverage: PhotoCoverage
     findings: list[Finding]
     positives: list[Positive]
-    adjustment_categories: list[AdjustmentCategory]
     dash_evidence: DashEvidence
     mismatch_flags: list[str]
     overall: Overall

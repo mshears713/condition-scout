@@ -9,8 +9,8 @@ from condition_scout.cli import build_parser
 
 
 def test_versions_are_pinned():
-    assert SCHEMA_VERSION == "0.2"
-    assert PROMPT_VERSION == "0.5"
+    assert SCHEMA_VERSION == "0.6"
+    assert PROMPT_VERSION == "0.6"
 
 
 def test_cli_help_exits_zero(capsys):

@@ -1,0 +1,16 @@
+{
+  "run_id": "valuation_run_stage5_verify",
+  "created_at": "2026-07-12T00:00:00Z",
+  "vehicle_context": "This is a used commercial fleet cargo van (Chevrolet Express G2500) being evaluated for a flip-to-camper-conversion project, not a retail or consumer vehicle purchase.",
+  "buyer_calibration": "This buyer converts cheap work vans to campers. Cosmetic ugliness (paint, adhesive/decal residue, light rust) and cargo-area wear matter little for grade -- they don't add real recon labor. Body/structural condition, tires, glass, and cab condition matter more, since they add real recon labor.",
+  "listings": [
+    {
+      "listing_id": "1614587",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/?s=1614587",
+      "year": 2017,
+      "platform": "Chevrolet Express",
+      "mileage": 51689
+    }
+  ]
+}

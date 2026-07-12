@@ -1,7 +1,7 @@
 [project]
 name = "condition-scout"
 version = "0.1.0"
-description = "Van Radar photo evidence tool: listing photos in, structured image-cited condition evidence out."
+description = "Van Radar Stage 5 tools: condition-scout (listing photos in, structured image-cited condition evidence out) and valuation-research-scout (cohort in, Tavily market research out)."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -13,6 +13,7 @@ dependencies = [
 
 [project.scripts]
 condition-scout = "condition_scout.cli:main"
+valuation-research-scout = "valuation_research_scout.cli:main"
 
 [dependency-groups]
 dev = [
@@ -24,7 +25,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/condition_scout"]
+packages = ["src/condition_scout", "src/valuation_research_scout"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

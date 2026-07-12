@@ -1,0 +1,173 @@
+{
+  "content": {
+    "cohort_summary": "The cohort consists of 2017-2018 Chevrolet Express / GMC Savana 2500 full-size cargo vans, no side windows, ladder rack and shelving upfit, mileage 51,689-163,753 miles, used in commercial fleet (ex-AT&T) in Florida/Southeast US. Research draws from JJ Kane/Proxibid auctions, dealer listings, eBay, Edmunds, IronPlanet, Copart and other auction sites.",
+    "source_platform_analysis": {
+      "platform": "JJ Kane (Proxibid)",
+      "same_platform_evidence_found": false,
+      "evidence_summary": "No completed sale or clearing price was found on JJ Kane. The available data are live auction listings and active listings that only show maximum bid increments (e.g., $400-$800) without final hammer prices.",
+      "observed_value_pattern": "No clear price pattern; listings indicate a low\u2011reserve, no\u2011reserve format that tends to drive prices down but without concrete sale numbers.",
+      "influence_on_auction_range": "Low influence because the absence of completed prices prevents the platform from shaping the fleet/auction market estimate.",
+      "confidence": "low"
+    },
+    "commercial_market": {
+      "value_range_low": 12950,
+      "value_range_high": 14999,
+      "rationale": "Based on dealer/online listings from Edmunds (2018 Express, 97,663 mi, $12,950 good price and $14,999 fair price) and an eBay 2017 GMC Savana (13k mi, $12,900 asking). These are asking prices from commercial sellers in Florida and the broader Southeast, representing the most recent market signals.",
+      "confidence": "medium"
+    },
+    "fleet_auction_market": {
+      "value_range_low": 4750,
+      "value_range_high": 9000,
+      "rationale": "Derived from wholesale/auction evidence: IronPlanet listed a 2017 Express for $4,750 (Florida), Copart estimated retail value $6,966 for a 2017 Savana with high mileage, and limited auction listings suggest values under $9,000 for fleet disposals. No completed JJ Kane sales were available.",
+      "confidence": "low"
+    },
+    "mileage_patterns": [
+      {
+        "mileage_range": "0-100k miles",
+        "observed_pattern": "Commercial asking prices cluster around $13k-$15k; auction/wholesale values cluster around $5k-$7k.",
+        "rationale": "Edmunds and eBay examples under 100k miles show higher commercial asking prices, while IronPlanet and Copart (both lower\u2011mileage) show lower auction values."
+      },
+      {
+        "mileage_range": "100k-180k miles",
+        "observed_pattern": "Commercial data scarce; auction listings indicate potentially lower values but no concrete prices.",
+        "rationale": "JJ Kane live listings (e.g., 177k mi) have no final price; the trend suggests mileage depresses price, but evidence is limited."
+      }
+    ],
+    "model_year_patterns": [
+      {
+        "model_year_or_range": "2017-2018",
+        "observed_pattern": "No significant price difference between 2017 and 2018 models in the available data.",
+        "rationale": "Edmunds listings for 2018 Express are similar to 2017 Savana eBay listings; both fall within the same price band."
+      }
+    ],
+    "important_modifiers": [
+      {
+        "modifier": "Source platform (JJ Kane auction)",
+        "observed_effect": "Potentially lower clearing prices due to no\u2011reserve format and buyer fees.",
+        "rationale": "Same\u2011platform evidence is absent, but the auction structure is known to compress prices compared with dealer listings."
+      },
+      {
+        "modifier": "Configuration (no side windows, ladder rack)",
+        "observed_effect": "May reduce price relative to standard passenger vans.",
+        "rationale": "All comparable vans are cargo\u2011upfit; market notes indicate upfit equipment is less valued than passenger amenities."
+      }
+    ],
+    "representative_comparables": [
+      {
+        "vehicle": "2018 Chevrolet Express 2500 Cargo Van",
+        "year": 2018,
+        "mileage": 97663,
+        "price": 12950,
+        "evidence_type": "asking",
+        "source_platform": "Edmunds",
+        "location": "Miami, FL",
+        "source_url": "https://www.edmunds.com/used-2018-chevrolet-express-cargo-miami-fl",
+        "condition_context": "clean",
+        "condition_notes": "Listed as good condition, runs and moves.",
+        "relevance": "high",
+        "relevance_notes": "Exact model, year, mileage within cohort, commercial dealer listing.",
+        "limitations": "Price is an asking price, not a completed transaction."
+      },
+      {
+        "vehicle": "2018 Chevrolet Express 2500 Cargo Van",
+        "year": 2018,
+        "mileage": 97663,
+        "price": 14999,
+        "evidence_type": "asking",
+        "source_platform": "Edmunds",
+        "location": "Miami, FL",
+        "source_url": "https://www.edmunds.com/used-2018-chevrolet-express-cargo-miami-fl",
+        "condition_context": "clean",
+        "condition_notes": "Listed as fair condition, runs and moves.",
+        "relevance": "high",
+        "relevance_notes": "Same as above, provides upper bound of commercial asking price.",
+        "limitations": "Asking price only; condition not verified."
+      },
+      {
+        "vehicle": "2017 GMC Savana G2500 Cargo Van",
+        "year": 2017,
+        "mileage": 13000,
+        "price": 12900,
+        "evidence_type": "asking",
+        "source_platform": "eBay",
+        "location": "USA (national)",
+        "source_url": "https://www.ebay.com/b/GMC-Savana-Cars/6001/bn_24010403",
+        "condition_context": "clean",
+        "condition_notes": "Seller describes vehicle as runs and moves, no major defects.",
+        "relevance": "medium",
+        "relevance_notes": "Same class and upfit, mileage well below cohort max, provides low\u2011mileage price reference.",
+        "limitations": "Private seller listing; price may include buyer negotiation."
+      },
+      {
+        "vehicle": "2017 Chevrolet Express G2500 Cargo Van",
+        "year": 2017,
+        "mileage": 177330,
+        "price": 800,
+        "evidence_type": "live_auction_context",
+        "source_platform": "JJ Kane",
+        "location": "Tampa, FL",
+        "source_url": "https://www.proxibid.com/Cars-Vehicles/Cars/Tampa-FL-2017-Chevrolet-Express-G2500-Cargo-Van-Runs-Moves-Body-Damage-FL-Residents-Purchasi/lotinformation/100780340",
+        "condition_context": "unknown",
+        "condition_notes": "Listing notes runs & moves; body damage mentioned.",
+        "relevance": "medium",
+        "relevance_notes": "Same platform, same vehicle type; shows bid ceiling but not final price.",
+        "limitations": "Maximum bid rate ($800) is not a final sale price; no completed transaction data."
+      },
+      {
+        "vehicle": "2017 Chevrolet Express 2500 Cargo Van",
+        "year": 2017,
+        "mileage": 82098,
+        "price": 4750,
+        "evidence_type": "wholesale",
+        "source_platform": "IronPlanet",
+        "location": "Florida",
+        "source_url": "https://www.ironplanet.com.au/Chevrolet?ct=13",
+        "condition_context": "unknown",
+        "condition_notes": "Listed as used van, no detailed condition.",
+        "relevance": "low",
+        "relevance_notes": "Provides a low\u2011end wholesale price reference for the region.",
+        "limitations": "Price is a wholesale listing; condition and exact mileage not fully disclosed."
+      }
+    ],
+    "major_caveats": [
+      "No completed JJ Kane auction sales were available; fleet/auction range relies on indirect wholesale data.",
+      "Commercial market values are based on asking prices only; no sold transaction data.",
+      "Mileage coverage is uneven; high\u2011mileage (>150k) data is limited to live listings without prices.",
+      "Geographic focus is Florida/Southeast, but some sources are national, which may introduce regional price variance.",
+      "Condition details are limited to seller descriptions; actual vehicle condition may differ."
+    ],
+    "overall_confidence": "low",
+    "research_summary": "Commercial asking prices for 2017-2018 Express/Savana 2500 cargo vans in Florida range from about $12,950 to $15,000, driven by dealer and online listings. Fleet/auction clearing values are lower, roughly $4,750 to $9,000, based on wholesale listings and limited auction estimates. Mileage under 100k tends to support the higher commercial range, while higher mileage lacks concrete pricing. No completed JJ Kane auction data were found, so the auction market estimate carries low confidence."
+  },
+  "sources": [
+    {
+      "url": "https://www.proxibid.com/Cars-Vehicles/Cars/Tampa-FL-2017-Chevrolet-Express-G2500-Cargo-Van-Runs-Moves-Body-Damage-FL-Residents-Purchasi/lotinformation/100780340",
+      "title": "(Tampa, FL) 2017 Chevrolet Express G2500 Cargo",
+      "favicon": "https://www.proxibid.com/images/apple-touch-icon.png"
+    },
+    {
+      "url": "https://www.edmunds.com/used-2018-chevrolet-express-cargo-miami-fl",
+      "title": "Used 2018 Chevrolet Express Cargo for Sale in Miami, FL | Edmunds",
+      "favicon": "https://www.edmunds.com/favicon.ico"
+    },
+    {
+      "url": "https://www.ebay.com/b/GMC-Savana-Cars/6001/bn_24010403",
+      "title": "GMC Savana Cars for sale | eBay",
+      "favicon": "https://www.ebay.com/favicon.ico"
+    },
+    {
+      "url": "https://www.ironplanet.com.au/Chevrolet?ct=13",
+      "title": "Chevrolet Motors For Sale - IronPlanet",
+      "favicon": "https://www.ironplanet.com.au/favicon.ico"
+    },
+    {
+      "url": "https://www.copart.com/vehicle-search-location/florida/ocala/gmc/savana",
+      "title": "Used Gmc SAVANA for Sale near Ocala, Florida | Copart Auctions",
+      "favicon": "https://www.copart.com/favicon.ico"
+    }
+  ],
+  "status": "completed",
+  "created_at": "2026-07-12T18:28:43.099485+00:00",
+  "response_time": 58.36,
+  "request_id": "f077c2bf-7a72-42c6-98a4-fd28c8e0a34a"
+}

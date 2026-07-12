@@ -67,8 +67,8 @@ def test_e2e_artifacts_complete_and_valid(run_dir):
             json.loads((folder / "condition_analysis.json").read_text(encoding="utf-8"))
         )
         assert analysis.listing_id == lid
-        assert analysis.schema_version == "0.2"
-        assert analysis.prompt_version == "0.5"
+        assert analysis.schema_version == "0.6"
+        assert analysis.prompt_version == "0.6"
         assert analysis.photo_coverage.photos_analyzed == EXPECTED_PHOTO_COUNTS[lid]
         # evidence citation rule: every finding cites downloaded files
         filenames = {p.name for p in photos}

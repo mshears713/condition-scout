@@ -14,7 +14,20 @@ building the Valuation Review Report.
 valuation logic *interprets* condition. Never use this tool's output to make
 or imply a buy/bid/pass decision. Its output contains zero dollar figures
 and zero decision language by design — if you ever see either, something is
-wrong, not intentional.
+wrong, not intentional. Condition Scout has zero financial role: there is
+no `adjustment_categories` field or any other field that maps condition to
+a dollar effect, and there never will be in this tool.
+
+## Stage 5 — run this in parallel with Valuation Research Scout
+
+Per the approved Stage 5 fan-out/fan-in architecture: after you derive the
+valuation cohort(s), launch this tool and Valuation Research Scout **in
+parallel** — this tool can take several minutes to process listing photos,
+and Tavily cohort research should run during that same window rather than
+afterward. The two branches are independent — this tool never inspects
+Valuation Research Scout's output, and Valuation Research Scout never
+inspects this tool's findings. Only you (CoWork) join both evidence
+streams afterward into the Stage 5 valuation package.
 
 ## When to use this
 

@@ -47,10 +47,11 @@ src/condition_scout/
   resolvers/       # jjkane.py, publicsurplus.py, purplewave.py, override.py
   download.py      # requests, pacing, photo_manifest.json, resume
   analyzer.py      # google-genai client seam, per-photo calls, synthesis
-  schema.py        # condition_analysis v0.2 pydantic models
+  schema.py        # condition_analysis v0.6 pydantic models (zero financial
+                   # role — no adjustment_categories or dollar-mapping field)
   artifacts.py     # json + md writers, run_summary.json
   orchestrator.py  # batch loop, per-listing error isolation, resume
-prompts/           # photo_prompt_v0.2.md, synthesis_prompt_v0.2.md
+prompts/           # photo_prompt_v0.6.md, synthesis_prompt_v0.6.md
                    # synced from the "Condition Scout — Analysis Prompt Spec"
                    # Knowledge page; the page wins on disagreement
 ```

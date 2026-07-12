@@ -1,0 +1,13 @@
+{
+  "run_id": "valuation_run_stage5_verify",
+  "started_at": "2026-07-12T18:17:22Z",
+  "finished_at": "2026-07-12T18:21:08Z",
+  "schema_version": "0.6",
+  "listings_total": 1,
+  "processed": [
+    "1614587"
+  ],
+  "failed": [],
+  "skipped": [],
+  "api_calls_used": 35
+}

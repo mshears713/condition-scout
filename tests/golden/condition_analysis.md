@@ -24,10 +24,6 @@ Straight-bodied work van with a heavily torn driver seat; typical fleet wear els
 - Odometer visible: yes
 - Evidence: `photo_014.jpg`
 
-## Adjustment categories (zone × severity band)
-
-- cab_interior: heavy
-
 ## Per-photo observations
 
 ### `photo_006.jpg` — cab_interior — driver seat area (clear)
@@ -42,4 +38,4 @@ Straight-bodied work van with a heavily torn driver seat; typical fleet wear els
 
 ---
 
-*Analyzed 2026-07-10T15:00:00Z · model gemini-2.5-flash-lite · schema v0.2 · prompt v0.2. Descriptive condition evidence only — this file never contains value estimates or purchase advice.*
+*Analyzed 2026-07-10T15:00:00Z · model gemini-2.5-flash-lite · schema v0.6 · prompt v0.6. Descriptive condition evidence only — this file never contains value estimates or purchase advice.*

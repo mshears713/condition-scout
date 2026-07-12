@@ -1,0 +1,12 @@
+{
+  "run_id": "valuation_research_run_wpb_mini_2026-07-12",
+  "started_at": "2026-07-12T18:28:42Z",
+  "finished_at": "2026-07-12T18:29:44Z",
+  "schema_version": "0.2",
+  "cohorts_total": 1,
+  "processed": [
+    "wpb-express-savana-2500-2017-2018"
+  ],
+  "failed": [],
+  "api_calls_used": 1
+}

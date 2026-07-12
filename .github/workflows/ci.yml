@@ -20,10 +20,10 @@ jobs:
         run: uv run pytest -q
 
   # Job 2: quota-tiny live smoke (<10 requests total). Uses the
-  # Actions-injected GEMINI_API_KEY repository secret; the live tests
-  # skip cleanly when the secret is absent. Never runs on pull_request
-  # (secrets are unavailable to fork PRs anyway) — feature-branch push
-  # and manual dispatch only, per the Engineering Plan.
+  # Actions-injected GEMINI_API_KEY and TAVILY_API_KEY repository secrets;
+  # each live test skips cleanly when its secret is absent. Never runs on
+  # pull_request (secrets are unavailable to fork PRs anyway) —
+  # feature-branch push and manual dispatch only, per the Engineering Plan.
   live-smoke:
     if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref != 'refs/heads/main')
     runs-on: ubuntu-latest
@@ -37,4 +37,5 @@ jobs:
       - name: Run live-smoke tests
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
         run: uv run pytest -q -m live -o addopts=""
