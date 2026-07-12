@@ -28,6 +28,12 @@ that same window rather than afterward. The two branches are independent;
 neither tool inspects the other's output. Only you (CoWork) join both
 evidence streams afterward into the Stage 5 valuation package.
 
+In practice, with the standing Mini model (see Step 2), this branch
+finishes in well under a minute (~30s observed in commissioning) while
+Condition Scout's photo analysis takes several minutes — expect this
+branch to complete first and simply hold its artifact until Condition
+Scout finishes. That's the parallelism working as intended, not a problem.
+
 ## When to use this
 
 The Van Deal Radar Listings database has rows at `Status = Needs Valuation
@@ -88,13 +94,23 @@ uv sync   # only needed once per checkout
 uv run valuation-research-scout run --run-dir valuation_research_run_2026-07-12/ --model mini
 ```
 
+**Always pass `--model mini` explicitly.** This is the standing production
+choice as of the 2026-07-12 West Palm Beach commissioning run (full
+writeup: `docs/validation/stage5/wpb-mini-vs-pro-commissioning.md`) —
+Pro's research was genuinely deeper (it found real, current JJ Kane item
+listings and cross-referenced fee inconsistencies Mini missed) but its
+structured output didn't reliably honor the schema's `evidence_type` enum
+or the required `price` field, so it failed contract validation. Pro also
+costs roughly 2-5x more in Tavily credits per call (15-250 vs Mini's
+4-110, against a 1,000-credit/month free-tier budget — see Known
+constraints). The CLI still accepts `--model pro` or `--model auto`, but
+don't use them for a normal Stage 5 run: if Pro is ever worth revisiting
+(e.g. after a schema change to accept free-text evidence types), that's a
+deliberate re-commissioning decision for Mike, not a default.
+
 Requires `TAVILY_API_KEY` available to the process (repo-root `.env` file,
 already gitignored, or an environment variable). **Never print, log, ask
 the user to paste, or write this key anywhere else.**
-
-`--model` is `mini`, `pro`, or `auto` (Tavily's default). For side-by-side
-commissioning runs, use two separate run folders — one per model — so
-artifacts don't collide.
 
 Exit codes: `0` = every cohort processed · `1` = at least one cohort failed
 (check `run_summary.json`) · `2` = manifest/setup error.
@@ -112,15 +128,28 @@ Exit codes: `0` = every cohort processed · `1` = at least one cohort failed
    normally need this.
 
 A cohort in `failed` has no `cohort_research.*` — do not fabricate
-research for it. Report it and move on, or ask Mike whether to retry.
+research for it, and **do not just re-run it to see if it works.** Every
+attempt spends real Tavily credits whether it succeeds or fails (see Known
+constraints). Read the failure reason in `run_summary.json` and the
+console output first; report it to Mike and ask before retrying — this
+tool has no resume/skip for cohorts the way Condition Scout resumes
+already-analyzed listings, so a re-run always re-spends credits, even for
+a cohort that already has a valid `cohort_research.json`.
 
 ## Known constraints
 
+- **Cost.** Each cohort research call spends real Tavily credits — Mini
+  costs roughly 4-110 credits per call, against a 1,000-credit/month
+  free-tier budget (Pro costs 15-250 and isn't currently used — see Step
+  2). Be deliberate: one run per cohort per valuation batch, never a
+  retry loop, and don't re-run a cohort that already has a valid
+  `cohort_research.json` without a real reason.
 - No buy/bid/pass recommendations, no maximum-bid calculation, no
   individual-subject-van valuation, no defect-specific dollar deductions —
   anywhere in output, by prompt design. This tool cannot strip words like
   "bid" from Tavily's own prose (the approved prompt itself uses "current
   live bid" descriptively) — the prohibition is on recommendation
   language, not auction vocabulary.
-- Tavily task completion can take from under a minute to several minutes;
-  this tool polls until complete or failed rather than returning early.
+- Tavily task completion: ~30s observed for Mini in commissioning (Pro
+  observed ~340s, not currently used). This tool polls until complete or
+  failed rather than returning early.

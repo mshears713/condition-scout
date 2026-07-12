@@ -55,6 +55,12 @@ transactions) from `asking` (unsold) and `live_auction_context` (an
 in-progress bid, not a completed sale) — never treat a live bid as a
 clearing price.
 
+**`model`** will read `"mini"` in practice — that's the standing production
+choice as of the 2026-07-12 commissioning run (SKILL.md Step 2 and
+`docs/validation/stage5/wpb-mini-vs-pro-commissioning.md` have the full
+rationale). Don't treat a `"pro"` or `"auto"` value here as normal; it
+means someone deliberately overrode `--model`.
+
 ## `run_summary.json` (run-folder root)
 
 ```
