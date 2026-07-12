@@ -1,0 +1,51 @@
+{
+  "run_id": "valuation_run_2026-07-10",
+  "created_at": "2026-07-10T12:00:00Z",
+  "vehicle_context": "Commercial fleet cargo van being evaluated for a flip/conversion project.",
+  "buyer_calibration": "This buyer converts cheap work vans to campers. Cosmetic wear matters little for grade; body/structural condition, tires, glass, and cab condition matter more.",
+  "listings": [
+    {
+      "listing_id": "1619602",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/item/1619602",
+      "year": 2016,
+      "platform": "Ford Transit 250",
+      "mileage": 128000,
+      "auction_id": null,
+      "photo_urls": null
+    },
+    {
+      "listing_id": "4043486",
+      "source": "PublicSurplus",
+      "listing_url": "https://www.publicsurplus.com/sms/auction/view?auc=4043486",
+      "year": 2015,
+      "platform": "Chevrolet Express 2500",
+      "mileage": 96000,
+      "auction_id": null,
+      "photo_urls": null
+    },
+    {
+      "listing_id": "ED5334",
+      "source": "Purple Wave",
+      "listing_url": "https://www.purplewave.com/auction/20260715/item/ED5334",
+      "year": 2017,
+      "platform": "Ram ProMaster 2500",
+      "mileage": 143500,
+      "auction_id": "20260715",
+      "photo_urls": null
+    },
+    {
+      "listing_id": "gd-7781",
+      "source": "GovDeals",
+      "listing_url": "https://www.govdeals.com/asset/7781",
+      "year": 2014,
+      "platform": "Ford E-250",
+      "mileage": 110200,
+      "auction_id": null,
+      "photo_urls": [
+        "https://webassets.lqdt1.com/images/aaaa1111-1.jpg",
+        "https://webassets.lqdt1.com/images/aaaa1111-2.jpg"
+      ]
+    }
+  ]
+}

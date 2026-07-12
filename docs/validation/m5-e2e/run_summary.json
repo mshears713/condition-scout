@@ -1,0 +1,27 @@
+{
+  "run_id": "e2e_fake_run",
+  "started_at": "2026-07-10T04:32:36Z",
+  "finished_at": "2026-07-10T04:32:36Z",
+  "schema_version": "0.2",
+  "listings_total": 6,
+  "processed": [
+    "1619602",
+    "4043486",
+    "ED5334",
+    "gd-7781"
+  ],
+  "failed": [
+    {
+      "listing_id": "404404",
+      "stage": "resolve",
+      "reason": "JJ Kane item API returned HTTP 404"
+    }
+  ],
+  "skipped": [
+    {
+      "listing_id": "gsa-001",
+      "reason": "source 'GSA Auctions' has no resolver and the manifest supplied no photo_urls override"
+    }
+  ],
+  "api_calls_used": 14
+}

@@ -1,0 +1,2 @@
+var picArray = ["https://d2jkjfhk3u1v7t.cloudfront.net/auction/4043486/full/IMG_0001.JPG","https://d2jkjfhk3u1v7t.cloudfront.net/auction/4043486/full/IMG_0002.JPG","https://d2jkjfhk3u1v7t.cloudfront.net/auction/4043486/full/IMG_0003.JPG","https://d2jkjfhk3u1v7t.cloudfront.net/auction/4043486/full/IMG_0004.JPG"];
+loadPics(picArray);

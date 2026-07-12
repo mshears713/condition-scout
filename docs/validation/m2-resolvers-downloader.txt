@@ -1,0 +1,45 @@
+# M2 validation evidence — 2026-07-10T04:24:15Z
+
+## Live fixture capture attempt (best-effort per plan)
+curl to www.jjkane.com/api/items/1619602, publicsurplus ajaxpicloader, purplewave CDN
+all blocked by environment network policy: 'CONNECT tunnel failed, response 403'
+=> fixtures are synthetic per documented probe shapes (see tests/fixtures/http/FIXTURES.md)
+=> live resolver verification rides on the CI live-smoke job + Stage 4
+
+$ uv run pytest -q
+.............................................                            [100%]
+45 passed in 0.18s
+
+$ uv run pytest tests/test_resolvers.py tests/test_download.py -v
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /home/user/condition-scout/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/user/condition-scout
+configfile: pyproject.toml
+plugins: anyio-4.14.1
+collecting ... collected 22 items
+
+tests/test_resolvers.py::test_jjkane_resolves_image_urls_in_order PASSED [  4%]
+tests/test_resolvers.py::test_jjkane_404_is_resolve_error PASSED         [  9%]
+tests/test_resolvers.py::test_jjkane_non_json_is_resolve_error PASSED    [ 13%]
+tests/test_resolvers.py::test_jjkane_missing_image_urls_is_resolve_error PASSED [ 18%]
+tests/test_resolvers.py::test_jjkane_empty_gallery_is_skip PASSED        [ 22%]
+tests/test_resolvers.py::test_publicsurplus_extracts_cloudfront_urls_from_js_payload PASSED [ 27%]
+tests/test_resolvers.py::test_publicsurplus_error_status_is_resolve_error PASSED [ 31%]
+tests/test_resolvers.py::test_publicsurplus_payload_without_urls_is_skip PASSED [ 36%]
+tests/test_resolvers.py::test_purplewave_enumerates_until_first_miss PASSED [ 40%]
+tests/test_resolvers.py::test_purplewave_uses_manifest_auction_id_over_url PASSED [ 45%]
+tests/test_resolvers.py::test_purplewave_no_photos_is_skip PASSED        [ 50%]
+tests/test_resolvers.py::test_purplewave_unparseable_auction_id_is_resolve_error PASSED [ 54%]
+tests/test_resolvers.py::test_override_urls_win_without_any_http PASSED  [ 59%]
+tests/test_resolvers.py::test_override_beats_known_source_resolver PASSED [ 63%]
+tests/test_resolvers.py::test_unknown_source_without_override_is_skip PASSED [ 68%]
+tests/test_download.py::test_download_writes_photos_and_manifest PASSED  [ 72%]
+tests/test_download.py::test_filename_extension_handling PASSED          [ 77%]
+tests/test_download.py::test_download_paces_between_requests PASSED      [ 81%]
+tests/test_download.py::test_download_resume_skips_existing_files PASSED [ 86%]
+tests/test_download.py::test_download_tolerates_partial_failures PASSED  [ 90%]
+tests/test_download.py::test_download_all_failed_raises PASSED           [ 95%]
+tests/test_download.py::test_pacer_no_sleep_when_calls_are_slow PASSED   [100%]
+
+============================== 22 passed in 0.17s ==============================

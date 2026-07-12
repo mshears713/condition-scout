@@ -1,0 +1,103 @@
+{
+  "listing_id": "1619602",
+  "source": "JJ Kane",
+  "analyzed_at": "2026-07-10T15:00:00Z",
+  "model": "gemini-2.5-flash-lite",
+  "schema_version": "0.2",
+  "prompt_version": "0.2",
+  "photo_observations": [
+    {
+      "photo": "photo_006.jpg",
+      "view": "cab_interior — driver seat area",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Driver seat bottom torn, foam exposed",
+          "zone": "cab_interior",
+          "polarity": "negative",
+          "severity": "heavy",
+          "confidence": "high"
+        },
+        {
+          "noticed": "Dash visible in background, no cracks apparent",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "medium"
+        }
+      ],
+      "dash_warning_lights": null,
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    },
+    {
+      "photo": "photo_014.jpg",
+      "view": "dash_instruments",
+      "photo_quality": "clear",
+      "observations": [
+        {
+          "noticed": "Instrument cluster illuminated, no warning lights visible",
+          "zone": "dash_instruments",
+          "polarity": "positive",
+          "severity": "none",
+          "confidence": "high"
+        }
+      ],
+      "dash_warning_lights": ["none visible"],
+      "odometer_contradiction": null,
+      "mismatch_note": null
+    }
+  ],
+  "photo_coverage": {
+    "photos_analyzed": 25,
+    "zones_covered": [
+      "exterior_front",
+      "exterior_sides",
+      "exterior_rear",
+      "roof",
+      "tires_wheels",
+      "engine_bay",
+      "cab_interior",
+      "dash_instruments",
+      "cargo_area"
+    ],
+    "zones_missing": ["underbody"],
+    "coverage_quality": "good"
+  },
+  "findings": [
+    {
+      "zone": "cab_interior",
+      "polarity": "negative",
+      "description": "Driver seat bottom heavily torn with exposed foam",
+      "severity": "heavy",
+      "confidence": "high",
+      "image_refs": ["photo_006.jpg", "photo_007.jpg"],
+      "red_flag_hint": "Interior / Cargo Roughness"
+    }
+  ],
+  "positives": [
+    {
+      "description": "Straight body panels, no visible collision damage",
+      "confidence": "medium",
+      "image_refs": ["photo_001.jpg"]
+    }
+  ],
+  "adjustment_categories": [
+    {
+      "zone": "cab_interior",
+      "band": "heavy"
+    }
+  ],
+  "dash_evidence": {
+    "warning_lights": ["none visible"],
+    "odometer_visible": true,
+    "odometer_reading": null,
+    "image_refs": ["photo_014.jpg"]
+  },
+  "mismatch_flags": [],
+  "overall": {
+    "visual_grade": "serviceable",
+    "summary": "Straight-bodied work van with a heavily torn driver seat; typical fleet wear elsewhere, no dash warnings visible.",
+    "confidence": "medium"
+  }
+}

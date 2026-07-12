@@ -1,0 +1,31 @@
+# M3 validation evidence — 2026-07-10T04:28:03Z
+
+$ uv run pytest -q
+...............................................................          [100%]
+63 passed in 0.24s
+
+$ uv run pytest tests/test_analyzer.py -v
+configfile: pyproject.toml
+plugins: anyio-4.14.1
+collecting ... collected 18 items
+
+tests/test_analyzer.py::test_load_prompts_version_and_header_stripping PASSED [  5%]
+tests/test_analyzer.py::test_load_prompts_missing_dir_raises PASSED      [ 11%]
+tests/test_analyzer.py::test_fill_template_substitutes_context PASSED    [ 16%]
+tests/test_analyzer.py::test_single_mode_one_call_per_photo_with_context PASSED [ 22%]
+tests/test_analyzer.py::test_single_mode_prompt_version_survives PASSED  [ 27%]
+tests/test_analyzer.py::test_grouped_mode_batches_photos PASSED          [ 33%]
+tests/test_analyzer.py::test_grouped_mode_wrong_record_count_triggers_repair_then_fails PASSED [ 38%]
+tests/test_analyzer.py::test_grouped_mode_batches_split_correctly PASSED [ 44%]
+tests/test_analyzer.py::test_rate_limit_backoff_then_success PASSED      [ 50%]
+tests/test_analyzer.py::test_rate_limit_exhaustion_fails_listing PASSED  [ 55%]
+tests/test_analyzer.py::test_malformed_json_repaired_once PASSED         [ 61%]
+tests/test_analyzer.py::test_truncated_json_repaired_once PASSED         [ 66%]
+tests/test_analyzer.py::test_malformed_twice_fails_listing PASSED        [ 72%]
+tests/test_analyzer.py::test_schema_violation_counts_as_malformed PASSED [ 77%]
+tests/test_analyzer.py::test_rpm_pacing_between_calls PASSED             [ 83%]
+tests/test_analyzer.py::test_synthesize_happy_path PASSED                [ 88%]
+tests/test_analyzer.py::test_synthesize_failure_stage_is_synthesize PASSED [ 94%]
+tests/test_analyzer.py::test_has_valid_analysis PASSED                   [100%]
+
+============================== 18 passed in 0.19s ==============================

@@ -1,0 +1,59 @@
+{
+  "run_id": "e2e_fake_run",
+  "created_at": "2026-07-10T12:00:00Z",
+  "listings": [
+    {
+      "listing_id": "1619602",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/item/1619602",
+      "year": 2016,
+      "platform": "Ford Transit 250",
+      "mileage": 128000
+    },
+    {
+      "listing_id": "4043486",
+      "source": "PublicSurplus",
+      "listing_url": "https://www.publicsurplus.com/sms/auction/view?auc=4043486",
+      "year": 2015,
+      "platform": "Chevrolet Express 2500",
+      "mileage": 96000
+    },
+    {
+      "listing_id": "ED5334",
+      "source": "Purple Wave",
+      "listing_url": "https://www.purplewave.com/auction/20260715/item/ED5334",
+      "year": 2017,
+      "platform": "Ram ProMaster 2500",
+      "mileage": 143500,
+      "auction_id": "20260715"
+    },
+    {
+      "listing_id": "gd-7781",
+      "source": "GovDeals",
+      "listing_url": "https://www.govdeals.com/asset/7781",
+      "year": 2014,
+      "platform": "Ford E-250",
+      "mileage": 110200,
+      "photo_urls": [
+        "https://webassets.lqdt1.com/images/aaaa1111-1.jpg",
+        "https://webassets.lqdt1.com/images/aaaa1111-2.jpg"
+      ]
+    },
+    {
+      "listing_id": "404404",
+      "source": "JJ Kane",
+      "listing_url": "https://www.jjkane.com/item/404404",
+      "year": 2013,
+      "platform": "Ford E-350",
+      "mileage": 155000
+    },
+    {
+      "listing_id": "gsa-001",
+      "source": "GSA Auctions",
+      "listing_url": "https://gsaauctions.gov/auctions/gsa-001",
+      "year": 2018,
+      "platform": "Nissan NV2500",
+      "mileage": 88000
+    }
+  ]
+}

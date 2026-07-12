@@ -1,0 +1,82 @@
+Stage 4 — Worklist Item 1: Windows clean-checkout parity
+Machine: Mike's Windows 11 + PowerShell (via Git Bash), Python 3.13.9, uv 0.9.5
+Date: 2026-07-10
+Commit under test: fed7679 (branch claude/focused-maxwell-r45zpw)
+
+=== First Commands ===
+
+$ uv sync
+Resolved 32 packages, installed 32 packages. Clean, no errors.
+
+$ uv run pytest -q
+FIRST RUN (before fixes): 1 failed, 72 passed, 4 deselected
+  FAILED tests/test_artifacts.py::test_write_condition_analysis_round_trips
+  Root cause: several tests/*.py helpers called Path.read_text()/write_text()
+  without encoding="utf-8". Python falls back to the OS locale-preferred
+  encoding for text I/O; on Linux (where the AVB was built) that's UTF-8, but
+  on this Windows machine it's cp1252. Fixture data containing an em-dash
+  (—, in a photo `view` string) round-tripped incorrectly, corrupting the
+  test's own comparison. Not a product defect — src/condition_scout/*.py
+  already pins encoding="utf-8" everywhere it touches text files.
+  Fix: added encoding="utf-8" to every read_text()/write_text() call missing
+  it across tests/test_analyzer.py, tests/test_artifacts.py,
+  tests/test_contracts.py, tests/test_download.py, tests/test_e2e.py.
+
+AFTER FIX:
+73 passed, 4 deselected in 0.92s
+  -> matches AVB Report claim exactly.
+
+$ uv run condition-scout run --run-dir tests/e2e_run --fake-network
+BEFORE FIX (console only, artifacts unaffected):
+  WARNING 404404: resolve failed <?> JJ Kane item API returned HTTP 404
+  INFO gsa-001: skipped <?> source 'GSA Auctions' has no resolver ...
+  run e2e_fake_run: 4 processed, 1 failed, 1 skipped (14 API calls) <?> see run_summary.json
+  (em-dash characters rendered as U+FFFD "?" on this machine's default
+  console codepage 850 / Python stdout encoding cp1252)
+  Root cause: src/condition_scout/orchestrator.py logger.info/warning and
+  print() calls embedded literal em-dash characters in console-facing
+  strings. Exit code and counts were correct; only the human-readable text
+  was garbled. run_summary.json / condition_analysis.json/.md on disk were
+  NOT affected (artifacts.py already writes with encoding="utf-8").
+  Fix: replaced em-dash with ASCII " - " in the console/log-facing strings
+  in orchestrator.py (resume-skip, skipped, resolve/download/analysis
+  failed, and the run summary line). Markdown artifact rendering
+  (artifacts.py) intentionally left with em-dash since .md files are read
+  in an editor, not the console, and are correctly UTF-8 encoded on disk.
+
+AFTER FIX:
+INFO 1619602: analyzed 3 photos
+INFO 4043486: analyzed 2 photos
+INFO ED5334: analyzed 3 photos
+INFO gd-7781: analyzed 2 photos
+WARNING 404404: resolve failed - JJ Kane item API returned HTTP 404
+INFO gsa-001: skipped - source 'GSA Auctions' has no resolver and the manifest supplied no photo_urls override
+run e2e_fake_run: 4 processed, 1 failed, 1 skipped (14 API calls) - see run_summary.json
+  FAILED 404404 at resolve: JJ Kane item API returned HTTP 404
+  SKIPPED gsa-001: source 'GSA Auctions' has no resolver and the manifest supplied no photo_urls override
+EXIT CODE: 1
+
+-> matches AVB Report claim exactly: exit 1, 4 processed / 1 failed / 1 skipped, 14 API calls.
+
+=== Verdict ===
+Windows clean-checkout parity: VERIFIED, with two Windows-only defects found
+and fixed (both code-level, test/console-encoding only, no product-logic
+change, no architecture impact):
+  1. Missing encoding="utf-8" on several test read_text()/write_text() calls
+     (tests/test_analyzer.py, test_artifacts.py, test_contracts.py,
+     test_download.py, test_e2e.py).
+  2. Em-dash characters in orchestrator.py console log/print strings,
+     replaced with ASCII hyphens for codepage-safe display.
+
+=== Network reachability check (informational, for later worklist items) ===
+https://www.jjkane.com/api/items/1619602            -> HTTP 200
+https://www.publicsurplus.com/sms/auction/ajaxpicloader -> HTTP 200
+https://generativelanguage.googleapis.com/           -> HTTP 404 (host reachable; expected for unauthenticated bare GET)
+All three real auction hosts and the Gemini API host are reachable from this
+machine, unlike the agent's original build container (no reach at all). This
+means worklist items 2/3/6 are not blocked by connectivity, only by
+GEMINI_API_KEY and Mike's presence for quality spot-checks and real manifest
+data.
+
+GEMINI_API_KEY: confirmed NOT set in this session (expected per run bindings;
+value never requested, printed, or logged).

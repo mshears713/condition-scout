@@ -1,0 +1,36 @@
+# M5 CI live-smoke evidence — 2026-07-10
+
+## Run history
+
+1. Run 29069358267 (push, commit cadf117) — job `test` PASSED (73 passed,
+   4 deselected); job `live-smoke` FAILED 1/4: the pinned default model
+   gemini-2.5-flash-lite returned
+   404 NOT_FOUND "This model ... is no longer available to new users".
+   The three live resolver tests PASSED — JJ Kane item API, PublicSurplus
+   picloader, and the Purple Wave CDN pattern all still answer with the
+   shapes recorded by the 2026-07-09 probe. The failure also proves the
+   Actions-injected GEMINI_API_KEY authenticates (the request reached the
+   model router). Secret shown only as *** in logs.
+
+2. Provisional delta applied (commit 75d80d7): DEFAULT_MODEL ->
+   gemini-flash-lite-latest rolling alias, per the plan's model-churn
+   mitigation ("name a class, not a pin").
+
+3. Run 29069409164 (push, commit 75d80d7) — conclusion: SUCCESS.
+   - job `test`: fully-faked suite green.
+   - job `live-smoke`: `uv run pytest -q -m live -o addopts=""` ->
+     "4 passed, 73 deselected in 3.83s"
+     * test_live_jjkane_item_api_shape          PASSED (real endpoint)
+     * test_live_publicsurplus_picloader_shape  PASSED (real endpoint)
+     * test_live_purplewave_cdn_pattern         PASSED (real CDN)
+     * test_live_gemini_structured_output_single_photo PASSED —
+       one real Gemini call on the fixture photo, response validated
+       against schema v0.2 by pydantic inside analyze_photos.
+   https://github.com/mshears713/condition-scout/actions/runs/29069409164
+
+## Ledger effect
+
+- "Live resolver calls against current listings" -> Verified (CI live-smoke)
+- "Real Gemini structured-output adherence (single call)" -> Verified
+  (CI live-smoke, with the model-alias provisional delta)
+- "CI green on GitHub" -> Verified (observed directly, run 29069409164)

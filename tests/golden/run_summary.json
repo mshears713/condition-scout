@@ -1,0 +1,17 @@
+{
+  "run_id": "valuation_run_2026-07-10",
+  "started_at": "2026-07-10T15:00:00Z",
+  "finished_at": "2026-07-10T15:22:00Z",
+  "schema_version": "0.2",
+  "listings_total": 4,
+  "processed": ["1619602", "4043486", "gd-7781"],
+  "failed": [
+    {
+      "listing_id": "ED5334",
+      "stage": "resolve",
+      "reason": "no photos found at the Purple Wave CDN pattern"
+    }
+  ],
+  "skipped": [],
+  "api_calls_used": 68
+}

@@ -1,0 +1,17 @@
+# M4 validation evidence — 2026-07-10T04:29:28Z
+
+$ uv run pytest -q
+....................................................................     [100%]
+68 passed in 0.25s
+
+$ uv run pytest tests/test_artifacts.py -v
+plugins: anyio-4.14.1
+collecting ... collected 5 items
+
+tests/test_artifacts.py::test_markdown_golden_regression PASSED          [ 20%]
+tests/test_artifacts.py::test_build_condition_analysis_stamps_and_computes PASSED [ 40%]
+tests/test_artifacts.py::test_write_condition_analysis_round_trips PASSED [ 60%]
+tests/test_artifacts.py::test_write_run_summary PASSED                   [ 80%]
+tests/test_artifacts.py::test_artifacts_contain_no_dollar_or_decision_language PASSED [100%]
+
+============================== 5 passed in 0.09s ===============================

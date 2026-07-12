@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # Job 1: the always-on, fully-faked suite. No network, no secrets.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Sync dependencies
+        run: uv sync --frozen
+      - name: Run fully-faked test suite
+        run: uv run pytest -q
+
+  # Job 2: quota-tiny live smoke (<10 requests total). Uses the
+  # Actions-injected GEMINI_API_KEY repository secret; the live tests
+  # skip cleanly when the secret is absent. Never runs on pull_request
+  # (secrets are unavailable to fork PRs anyway) — feature-branch push
+  # and manual dispatch only, per the Engineering Plan.
+  live-smoke:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref != 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.11"
+      - name: Sync dependencies
+        run: uv sync --frozen
+      - name: Run live-smoke tests
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: uv run pytest -q -m live -o addopts=""
